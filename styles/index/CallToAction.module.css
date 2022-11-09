@@ -15,6 +15,8 @@
 }
 
 .callToAction button {
+  display: flex;
+  align-items: center;
   background-color: var(--secondaryColor);
   padding: 0.75rem;
   border-radius: 1rem;
@@ -22,7 +24,7 @@
 }
 
 .callToAction button:hover {
-  box-shadow: 6px 6px var(--white);
+  box-shadow: 5px 5px var(--white);
 }
 .callToAction button:active {
   box-shadow: 2px 2px var(--white);
