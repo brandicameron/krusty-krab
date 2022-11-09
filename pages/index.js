@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Light from '../public/images/light.png';
 import Header from '../components/index/Header';
 import Banner from '../components/index/Banner';
+import CallToAction from '../components/index/CallToAction';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Image className={styles.light} src={Light} alt='' />
       <Header />
       <Banner />
+      <CallToAction />
     </div>
   );
 }

@@ -3,7 +3,11 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 225px);
+}
+
+.banner h1 {
+  margin-top: -10vh;
 }
 
 .attnText {
@@ -22,6 +26,7 @@
 }
 
 .krabbyPatty {
+  margin-top: -12vh;
   animation: float 7s ease-in-out infinite;
 }
 

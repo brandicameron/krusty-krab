@@ -1,0 +1,29 @@
+.callToAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 75px;
+  background-color: var(--highlightColor);
+}
+
+.callToAction h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.75rem);
+  font-family: var(--displayFont);
+  color: var(--secondaryColor);
+}
+
+.callToAction button {
+  background-color: var(--secondaryColor);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 4px 4px var(--white);
+}
+
+.callToAction button:hover {
+  box-shadow: 6px 6px var(--white);
+}
+.callToAction button:active {
+  box-shadow: 2px 2px var(--white);
+}
