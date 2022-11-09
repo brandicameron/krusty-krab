@@ -1,26 +1,106 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Palanquin+Dark:wght@600&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --primaryColor: #b70202;
+  --secondaryColor: #017de6;
+  --white: #fff;
+  --highlightColor: #ffea00;
+  --gradient: linear-gradient(to top, #015eea, #00c0fa);
+  --borderRadius: 10px;
+  --displayFont: 'Londrina Solid', cursive;
+  --shadowColor: rgb(9, 65, 226, 70%);
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html,
+body {
+  height: 100vh;
+  /* allows 100vh to work properly on android phones, while still applying the fill available fix on ios */
+  max-height: -webkit-fill-available;
+}
+
+body {
+  font-family: 'Palanquin Dark', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--gradient);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+a,
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--displayFont);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2 {
+  line-height: 1.3;
+}
+
+p {
+  max-width: 60ch;
+  font-size: 1.5rem;
+}
+
+img {
+  object-fit: cover;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+.skip-to-content-link {
+  position: absolute;
+  background: var(--primaryColor);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: var(--borderRadius);
+  padding: 10px 15px;
+  margin: 10px;
+  z-index: 100;
+  border: 3px solid var(--white);
+  transform: translateY(-500%);
+}
+
+.skip-to-content-link:focus {
+  transform: translateY(0%);
 }
