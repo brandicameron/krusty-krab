@@ -1,62 +1,32 @@
 .banner {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  place-content: center;
+  height: calc(100vh - 110px);
+}
+
+.content {
+  display: grid;
+  width: 80vw;
+  max-width: 900px;
+  align-items: center;
   gap: 2rem;
-  height: calc(100vh - 29vh);
-  margin: 0 10vw;
-  opacity: 0;
-  transform: translateY(1rem);
-  animation: fade-in 300ms linear forwards;
-  animation-delay: 500ms;
+  grid-template-areas:
+    'heading pattyImg'
+    'pText pattyImg'
+    'button pattyImg';
 }
 
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.content h1 {
+  grid-area: heading;
 }
 
-.attnText {
-  display: block;
-  font-family: var(--displayFont);
-  font-size: clamp(5rem, 12vh, 8rem);
-  line-height: 0.85;
-  color: var(--primaryColor);
-  margin: 0.5rem 0 1.5rem 0;
-  text-shadow: var(--textShadow);
+.content p {
+  grid-area: pText;
 }
 
-.banner p {
-  max-width: 375px;
-}
-
-.krabbyPatty {
+.content img {
+  grid-area: pattyImg;
   animation: float 7s ease-in-out infinite;
-}
-
-.krabbyPattyMobile {
-  display: none;
-  animation: float 7s ease-in-out infinite;
-}
-
-.banner button {
-  font-size: 2.5rem;
-  background-color: var(--primaryColor);
-  padding: 0.25rem 2rem;
-  border-radius: 1.5rem;
-  transform: skew(-10deg) rotate(-5deg);
-  margin: 2rem 0;
-  box-shadow: 5px 5px var(--white);
-  transition: box-shadow 200ms linear;
-}
-
-.banner button:hover {
-  box-shadow: 7px 7px var(--white);
-}
-.banner button:active {
-  box-shadow: 3px 3px var(--white);
 }
 
 @keyframes float {
@@ -68,29 +38,63 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+.content h1 span {
+  display: block;
+  font-family: var(--displayFont);
+  font-size: clamp(5rem, 12vh, 8rem);
+  line-height: 0.85;
+  color: var(--primaryColor);
+  margin-top: 0.5rem;
+  text-shadow: var(--textShadow);
+}
+
+.content button {
+  grid-area: button;
+  font-size: 2.5rem;
+  max-width: 250px;
+  background-color: var(--primaryColor);
+  padding: 0.25rem 2rem;
+  border-radius: 1.5rem;
+  transform: skew(-10deg) rotate(-5deg);
+  box-shadow: 5px 5px var(--white);
+  transition: box-shadow 200ms linear;
+}
+
+.content button:hover {
+  box-shadow: 7px 7px var(--white);
+}
+.content button:active {
+  box-shadow: 3px 3px var(--white);
+}
+
+@media screen and (max-width: 900px) {
   .banner {
     height: auto;
   }
 
   .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;
-    gap: 0.5rem;
+    height: auto;
+    gap: 1.5rem;
+    grid-template-areas:
+      'heading'
+      'pattyImg'
+      'pText'
+      'button';
   }
 
-  .banner h1 {
+  .content h1 {
     text-align: center;
+    margin-bottom: 1rem;
   }
 
-  .krabbyPatty {
-    display: none;
+  .content img {
+    width: 275px;
+    height: fit-content;
+    object-fit: contain;
+    margin: 0 auto;
   }
 
-  .krabbyPattyMobile {
-    display: block;
-    margin: 0.5rem auto 0 auto;
+  .content button {
+    margin: 0 auto;
   }
 }

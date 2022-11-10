@@ -29,7 +29,7 @@ export default function Home() {
       <Image priority className={styles.light} src={Light} alt='' />
       <Header />
       <Banner />
-      <CallToAction />
+      {/* <CallToAction /> */}
     </div>
   );
 }
