@@ -6,13 +6,14 @@
 
 .content {
   display: grid;
-  width: min(900px, 80vw);
+  width: min(1100px, 90vw);
   align-items: center;
   gap: 2rem;
+  text-align: center;
   grid-template-areas:
-    'heading pattyImg'
-    'pText pattyImg'
-    'button pattyImg';
+    'pattyImg heading'
+    'pattyImg pText'
+    'pattyImg button';
 }
 
 .content h1 {
@@ -40,7 +41,7 @@
 .content h1 span {
   display: block;
   font-family: var(--displayFont);
-  font-size: clamp(5rem, 12vh, 8rem);
+  font-size: clamp(5rem, 10vw, 7rem);
   line-height: 0.85;
   color: var(--primaryColor);
   margin-top: 0.5rem;
@@ -51,6 +52,7 @@
   grid-area: button;
   font-size: 2.5rem;
   max-width: 250px;
+  margin: 0 auto;
   background-color: var(--primaryColor);
   padding: 0.25rem 2rem;
   border-radius: 1.5rem;
@@ -68,7 +70,7 @@
 
 @media screen and (pointer: coarse) and (orientation: landscape) {
   .banner {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 149px);
   }
 
   .header nav li:not(.cartContainer) {
@@ -96,14 +98,14 @@
     margin-bottom: 1rem;
   }
 
+  .content p {
+    max-width: 30ch;
+  }
+
   .content img {
     width: 275px;
     height: fit-content;
     object-fit: contain;
-    margin: 0 auto;
-  }
-
-  .content button {
     margin: 0 auto;
   }
 }
