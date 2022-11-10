@@ -1,22 +1,29 @@
 .banner {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
-  height: calc(100vh - 225px);
+  height: calc(100vh - 30vh);
+  margin: 0 10vw;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: fade-in 300ms linear forwards;
+  animation-delay: 500ms;
 }
 
-.banner h1 {
-  margin-top: -10vh;
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .attnText {
   display: block;
   font-family: var(--displayFont);
-  font-size: clamp(5rem, 13vh, 8rem);
+  font-size: clamp(5rem, 12vh, 8rem);
   line-height: 0.85;
   color: var(--primaryColor);
-  max-width: 350px;
   margin: 0.5rem 0 1.5rem 0;
   text-shadow: var(--textShadow);
 }
@@ -26,7 +33,11 @@
 }
 
 .krabbyPatty {
-  margin-top: -12vh;
+  animation: float 7s ease-in-out infinite;
+}
+
+.krabbyPattyMobile {
+  display: none;
   animation: float 7s ease-in-out infinite;
 }
 
@@ -54,5 +65,32 @@
   }
   100% {
     transform: translateY(0) rotate(0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .banner {
+    height: auto;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    gap: 0.5rem;
+  }
+
+  .banner h1 {
+    text-align: center;
+  }
+
+  .krabbyPatty {
+    display: none;
+  }
+
+  .krabbyPattyMobile {
+    display: block;
+    margin: 0.5rem auto 0 auto;
   }
 }

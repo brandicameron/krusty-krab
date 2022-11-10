@@ -26,10 +26,10 @@ export default function Home() {
       <a className='skip-to-content-link' href='#skip-target'>
         Skip to content
       </a>
-      <Image className={styles.light} src={Light} alt='' />
+      <Image priority className={styles.light} src={Light} alt='' />
       <Header />
       <Banner />
-      <CallToAction />
+      {/* <CallToAction /> */}
     </div>
   );
 }

@@ -7,7 +7,7 @@
   --highlightColor: #ffea00;
   --gradient: linear-gradient(to top, #015eea, #00c0fa);
   --borderRadius: 10px;
-  --displayFont: 'Londrina Solid', cursive;
+  --displayFont: 'Londrina Solid', sans-serif;
   --shadowColor: rgb(9, 65, 226, 70%);
   --textShadow: 1px 1px 0px var(--white), 2px 2px 0px var(--white), 3px 3px 0px var(--white),
     4px 4px 0px var(--white), 5px 5px 0px var(--white);

@@ -11,3 +11,12 @@
     transform: translateX(-50%) rotate(360deg);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .light {
+    width: 300px;
+    height: 300px;
+    margin-top: -180px;
+    animation: none;
+  }
+}

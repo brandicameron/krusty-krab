@@ -6,12 +6,9 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href='/' className={styles.logo}>
-        <Image
-          src='/./images/krusty-krab-logo.png'
-          alt='Krusty Krab Logo'
-          width={240}
-          height={193}
-        />
+        {/* <img src='/./images/krusty-krab-logo.png' alt='Krusty Krab Logo' width={175} height={140} /> */}
+        <img src='/./images/krusty-krab-logo.png' alt='Krusty Krab Logo' width={200} height={160} />
+        {/* <img src='/./images/krusty-krab-logo.png' alt='Krusty Krab Logo' width={240} height={193} /> */}
       </Link>
       <nav>
         <ul>
