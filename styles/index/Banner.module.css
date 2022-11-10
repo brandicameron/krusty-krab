@@ -1,13 +1,12 @@
 .banner {
   display: grid;
   place-content: center;
-  height: calc(100vh - 110px);
+  height: calc(100vh - 115px);
 }
 
 .content {
   display: grid;
-  width: 80vw;
-  max-width: 900px;
+  width: min(900px, 80vw);
   align-items: center;
   gap: 2rem;
   grid-template-areas:
@@ -65,6 +64,16 @@
 }
 .content button:active {
   box-shadow: 3px 3px var(--white);
+}
+
+@media screen and (pointer: coarse) and (orientation: landscape) {
+  .banner {
+    height: calc(100vh - 150px);
+  }
+
+  .header nav li:not(.cartContainer) {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 900px) {

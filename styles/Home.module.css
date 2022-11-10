@@ -4,6 +4,7 @@
   transform: translateX(-50%);
   margin-top: -540px;
   animation: rotate 150s linear infinite;
+  z-index: -1;
 }
 
 @keyframes rotate {

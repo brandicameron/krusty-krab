@@ -1,5 +1,5 @@
 .header {
-  /* height: 30vh; */
+  height: 115px;
 }
 
 .logo {
@@ -24,7 +24,7 @@
 .header nav ul {
   display: flex;
   gap: 2rem;
-  font-size: clamp(1rem, 5vw, 1.6rem);
+  font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 .header nav li:hover:not(.cartContainer) {
@@ -60,10 +60,6 @@
   .logo {
     width: 185px;
     top: 15px;
-  }
-
-  .header {
-    height: 25vh;
   }
 
   .header nav li:not(.cartContainer) {
