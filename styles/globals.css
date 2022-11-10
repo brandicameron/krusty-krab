@@ -3,8 +3,9 @@
 :root {
   --primaryColor: #b70202;
   --secondaryColor: #017de6;
-  --white: #fff;
   --highlightColor: #ffea00;
+  --focusColor: #6707ed;
+  --white: #fff;
   --gradient: linear-gradient(to top, #015eea, #00c0fa);
   --borderRadius: 10px;
   --displayFont: 'Londrina Solid', sans-serif;
@@ -55,6 +56,12 @@ button {
   border: none;
   cursor: pointer;
   font-family: var(--displayFont);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 5px solid var(--focusColor);
+  outline-offset: 0.25rem;
 }
 
 p,

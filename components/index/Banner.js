@@ -4,7 +4,7 @@ import KrabbyPatty from '../../public/images/krabby-patty.png';
 
 export default function Banner() {
   return (
-    <section className={styles.banner}>
+    <section className={styles.banner} id='skip-target'>
       <div className={styles.content}>
         <h1>
           The Original <span className={styles.attnText}>Krabby Patty</span>
