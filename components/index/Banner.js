@@ -7,7 +7,7 @@ export default function Banner() {
     <section className={styles.banner} id='skip-target'>
       <div className={styles.content}>
         <h1>
-          The Original <span>Krabby Patty</span>
+          The Original <span className='display-text'>Krabby Patty</span>
         </h1>
         <p>
           The world famous secret formula Krabby Patty — you'll fall in love at first bite. Try it

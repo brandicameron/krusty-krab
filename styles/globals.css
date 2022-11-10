@@ -23,9 +23,9 @@
 
 html,
 body {
-  height: 100vh;
+  /* height: 100vh; */
   /* allows 100vh to work properly on android phones, while still applying the fill available fix on ios */
-  max-height: -webkit-fill-available;
+  /* max-height: -webkit-fill-available; */
 }
 
 body {
@@ -112,4 +112,15 @@ li {
 
 .skip-to-content-link:focus {
   transform: translateY(0%);
+}
+
+/* Utilities */
+.display-text {
+  display: block;
+  font-family: var(--displayFont);
+  font-size: clamp(5rem, 10vw, 7rem);
+  line-height: 0.85;
+  color: var(--primaryColor);
+  margin-top: 0.5rem;
+  text-shadow: var(--textShadow);
 }

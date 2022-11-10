@@ -5,6 +5,7 @@ import Light from '../public/images/light.png';
 import Header from '../components/index/Header';
 import Banner from '../components/index/Banner';
 import CallToAction from '../components/index/CallToAction';
+import Menu from '../components/index/Menu';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <Header />
       <Banner />
       <CallToAction />
+      <Menu />
     </div>
   );
 }

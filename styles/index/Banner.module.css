@@ -38,16 +38,6 @@
   }
 }
 
-.content h1 span {
-  display: block;
-  font-family: var(--displayFont);
-  font-size: clamp(5rem, 10vw, 7rem);
-  line-height: 0.85;
-  color: var(--primaryColor);
-  margin-top: 0.5rem;
-  text-shadow: var(--textShadow);
-}
-
 .content button {
   grid-area: button;
   font-size: 2.5rem;
