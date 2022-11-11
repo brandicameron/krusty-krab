@@ -6,6 +6,7 @@ import Header from '../components/index/Header';
 import Banner from '../components/index/Banner';
 import CallToAction from '../components/index/CallToAction';
 import Menu from '../components/index/Menu';
+import Employee from '../components/index/Employee';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <Banner />
       <CallToAction />
       <Menu />
+      <Employee />
     </div>
   );
 }

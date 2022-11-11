@@ -1,6 +1,10 @@
+.menuContainer {
+  margin: 8rem 0 2rem 0;
+}
+
 .menuContainer h1 {
   text-align: center;
-  margin: 8rem 0 4rem 0;
+  margin-bottom: 4rem;
 }
 
 .menu {
