@@ -6,18 +6,35 @@ import { menuItems } from '../data/menuItems';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Cart() {
-  const { cartItems } = useContext(AppContext);
+  const { cartItems, setCartItems } = useContext(AppContext);
 
   const shoppingCart = Array.from(cartItems, ([key, value]) => {
     let itemPrice = menuItems.find((el) => el.name === key);
-    return { name: key, quantity: value, price: parseFloat(itemPrice.price) };
+    return { name: key, quantity: value, price: parseFloat(itemPrice.price) * value };
   });
 
   const total = shoppingCart.reduce((total, obj) => parseFloat(obj.price) + total, 0);
 
-  //TODO - Make quantity buttons work
-  const handleUpdateQuantity = () => {
-    // what to do here???
+  const handleUpdateQuantity = (e) => {
+    const name = e.currentTarget.getAttribute('data-name');
+    let currentQuantity = cartItems.get(name);
+
+    if (e.target.textContent === '-' && cartItems.get(name) > 0) {
+      setCartItems((prev) => new Map(prev).set(name, cartItems.get(name) - 1));
+      currentQuantity = currentQuantity - 1;
+    } else if (e.target.textContent === '+') {
+      setCartItems((prev) => new Map(prev).set(name, cartItems.get(name) + 1));
+      currentQuantity = currentQuantity + 1;
+    }
+
+    // Delete item if quantity updates to zero
+    if (currentQuantity === 0) {
+      setCartItems((prev) => {
+        const newState = new Map(prev);
+        newState.delete(name);
+        return newState;
+      });
+    }
   };
 
   return (
@@ -30,9 +47,13 @@ export default function Cart() {
               <div>
                 <h2>{item.name}</h2>
                 <div className={styles.quantity}>
-                  <button>-</button>
+                  <button onClick={handleUpdateQuantity} data-name={item.name}>
+                    -
+                  </button>
                   <p>{item.quantity}</p>
-                  <button>+</button>
+                  <button onClick={handleUpdateQuantity} data-name={item.name}>
+                    +
+                  </button>
                 </div>
               </div>
               <p>${item.price.toFixed(2)}</p>
