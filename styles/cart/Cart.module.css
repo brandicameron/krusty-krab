@@ -30,24 +30,23 @@
 
 .quantity {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: var(--primaryColor);
   border-radius: var(--borderRadius);
-  padding: 0 1rem;
   margin-top: 0.5rem;
   width: 100px;
 }
 
 .quantity button {
-  padding: 0 0.3rem;
+  padding: 0 0.5rem;
   font-size: 1.5rem;
-  line-height: 1;
   background-color: var(--primaryColor);
-  transition: filter 150ms linear;
+  border-radius: var(--borderRadius);
+  transition: all 150ms linear;
 }
 
 .quantity button:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.2);
 }
 
 .quantity p {

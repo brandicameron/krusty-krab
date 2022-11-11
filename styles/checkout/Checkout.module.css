@@ -12,6 +12,10 @@
   margin-top: -5vh;
 }
 
+.checkout a {
+  margin-top: 3rem;
+}
+
 @media screen and (max-width: 900px) {
   .checkout {
     height: calc(100vh - 350px);

@@ -125,7 +125,7 @@ li {
   max-width: 250px;
   margin: 0 auto;
   background-color: var(--primaryColor);
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 2rem 0.5rem 2rem;
   border-radius: 1.5rem;
   transform: skew(-10deg) rotate(-5deg);
   box-shadow: 5px 5px var(--white);
