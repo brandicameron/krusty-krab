@@ -12,6 +12,10 @@
   margin-top: -5vh;
 }
 
+.checkout h1 span {
+  font-size: 2rem;
+}
+
 .checkout a {
   margin-top: 3rem;
 }
