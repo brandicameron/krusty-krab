@@ -1,4 +1,5 @@
 import styles from '../styles/cart/Cart.module.css';
+import Link from 'next/link';
 import { useContext } from 'react';
 import { AppContext } from '../AppContext';
 import { menuItems } from '../data/menuItems';
@@ -13,6 +14,11 @@ export default function Cart() {
   });
 
   const total = shoppingCart.reduce((total, obj) => parseFloat(obj.price) + total, 0);
+
+  //TODO - Make quantity buttons work
+  const handleUpdateQuantity = () => {
+    // what to do here???
+  };
 
   return (
     <section className={styles.cart}>
@@ -36,7 +42,9 @@ export default function Cart() {
         <h3>Total</h3>
         <p className={styles.totalPrice}>${total.toFixed(2)}</p>
       </div>
-      <button className={styles.checkoutBtn}>Checkout</button>
+      <Link href='checkout' className={styles.checkoutBtn}>
+        Checkout
+      </Link>
     </section>
   );
 }

@@ -25,8 +25,7 @@
 
 .quantity {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
   background-color: var(--primaryColor);
   border-radius: var(--borderRadius);
   padding: 0 1rem;
@@ -35,11 +34,15 @@
 }
 
 .quantity button {
-  width: 30px;
-  height: 30px;
+  padding: 0 0.3rem;
   font-size: 1.5rem;
   line-height: 1;
   background-color: var(--primaryColor);
+  transition: filter 150ms linear;
+}
+
+.quantity button:hover {
+  filter: brightness(1.1);
 }
 
 .quantity p {
@@ -62,10 +65,16 @@
 .checkoutBtn {
   background-color: var(--primaryColor);
   font-size: 1.5rem;
+  text-align: center;
   width: 100%;
   border-radius: var(--borderRadius);
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.75rem 0;
   margin-top: 1.5rem;
+  transition: filter 150ms linear;
+}
+
+.checkoutBtn:hover {
+  filter: brightness(1.1);
 }
 
 @media screen and (max-width: 900px) {

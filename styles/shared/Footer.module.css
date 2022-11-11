@@ -120,6 +120,12 @@
   }
 }
 
+@media (prefers-reduced-motion) {
+  .bubbles {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .mobileBreak {
     display: block;
