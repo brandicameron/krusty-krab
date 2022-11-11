@@ -10,7 +10,7 @@ export default function AddedToCartModal() {
       <div className={styles.successModalContent}>
         <p className={styles.addSign}>+</p>
         <img src='./images/cart.svg' alt='' />
-        <p>{itemName} added to cart!</p>
+        <p className={styles.itemName}>{itemName} added to cart!</p>
       </div>
     </section>
   );
