@@ -17,7 +17,7 @@ export default function Menu() {
           ))}
         </ul>
         <ul className={styles.nestedItems}>
-          {nestedMenuItems.slice(0, 1).map((item) => (
+          {menuItems.slice(-2, -1).map((item) => (
             <li key={item.title}>
               <h2>{item.title}</h2>
               <ul className={styles.sizes}>
@@ -33,7 +33,7 @@ export default function Menu() {
           ))}
         </ul>
         <ul className={styles.nestedItems}>
-          {nestedMenuItems.slice(1, 2).map((item) => (
+          {menuItems.slice(-1).map((item) => (
             <li key={item.title}>
               <h2>{item.title}</h2>
               <ul className={styles.sizes}>
@@ -125,9 +125,6 @@ const menuItems = [
     title: 'Kelp Shake',
     price: '2.00',
   },
-];
-
-const nestedMenuItems = [
   {
     title: 'Coral Bits',
     sizes: [
