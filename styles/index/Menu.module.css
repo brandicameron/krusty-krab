@@ -1,10 +1,14 @@
 .menuContainer {
-  margin: 8rem 0 2rem 0;
+  margin: 8rem auto 2rem auto;
 }
 
 .menuContainer h1 {
   text-align: center;
-  margin-bottom: 4rem;
+}
+
+.menuContainer h2 {
+  text-align: center;
+  margin: 2rem 0 2.5rem 0;
 }
 
 .menu {
@@ -29,33 +33,22 @@
   column-gap: 5rem;
 }
 
-.menuItems li {
+.menuItems li button {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  background-color: transparent;
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .menuItems li:not(:first-of-type) {
   margin-top: 1rem;
 }
 
-.menuItems li h2 {
+.menuItems li button h3 {
   line-height: 1.2;
-}
-
-.nestedItems {
-  border: 2px dotted var(--white);
-  padding: 2rem;
-  border-radius: 20px;
-}
-
-.sizes {
-  margin-left: 1.5rem;
-}
-
-.sizes li {
-  display: flex;
-  justify-content: space-between;
 }
 
 .dotLeaders {

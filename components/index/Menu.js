@@ -1,37 +1,65 @@
 import styles from '../../styles/index/Menu.module.css';
+import { useContext } from 'react';
+import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KelpShake from '../../public/images/kelp-shake.png';
+import { useAddToCart } from '../../hooks/useAddToCart';
 
 export default function Menu() {
+  const { cartItems, setCartItems } = useContext(AppContext);
+  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
+
   return (
     <section className={styles.menuContainer}>
       <h1 className='display-text'>Galley Grub</h1>
+      <h2>Click an item to add to cart.</h2>
       <div className={styles.menu}>
         <ul className={`${styles.menuItems} ${styles.columns}`}>
           {menuItems.slice(0, 10).map((item) => (
-            <li key={item.title}>
-              <h2>{item.title}</h2>
-              <span className={styles.dotLeaders}></span>
-              <p>{item.price}</p>
+            <li key={item.name}>
+              <button
+                name={`Add ${item.name} to cart`}
+                data-value={item.name}
+                onClick={handleAddToCart}
+                title={`Add ${item.name} to cart.`}
+              >
+                <h3>{item.name}</h3>
+                <span className={styles.dotLeaders}></span>
+                <p>{item.price}</p>
+              </button>
             </li>
           ))}
         </ul>
         <ul className={styles.menuItems}>
           {menuItems.slice(10, 12).map((item) => (
-            <li key={item.title}>
-              <h2>{item.title}</h2>
-              <span className={styles.dotLeaders}></span>
-              <p>{item.price}</p>
+            <li key={item.name}>
+              <button
+                name={`Add ${item.name} to cart`}
+                data-value={item.name}
+                onClick={handleAddToCart}
+                title={`Add ${item.name} to cart.`}
+              >
+                <h3>{item.name}</h3>
+                <span className={styles.dotLeaders}></span>
+                <p>{item.price}</p>
+              </button>
             </li>
           ))}
         </ul>
         <ul className={styles.menuItems}>
           {menuItems.slice(12, 14).map((item) => (
-            <li key={item.title}>
+            <li key={item.name}>
               <Image className={styles.kelpShake} src={KelpShake} alt='Delicious Kelp Shake' />
-              <h2>{item.title}</h2>
-              <span className={styles.dotLeaders}></span>
-              <p>{item.price}</p>
+              <button
+                name={`Add ${item.name} to cart`}
+                data-value={item.name}
+                onClick={handleAddToCart}
+                title={`Add ${item.name} to cart.`}
+              >
+                <h3>{item.name}</h3>
+                <span className={styles.dotLeaders}></span>
+                <p>{item.price}</p>
+              </button>
             </li>
           ))}
         </ul>
@@ -42,59 +70,59 @@ export default function Menu() {
 
 const menuItems = [
   {
-    title: 'Krabby Patty',
+    name: 'Krabby Patty',
     price: '1.25',
   },
   {
-    title: 'Double Krabby Patty',
+    name: 'Double Krabby Patty',
     price: '2.00',
   },
   {
-    title: 'Tripple Krabby Patty',
+    name: 'Tripple Krabby Patty',
     price: '3.00',
   },
   {
-    title: 'Krabby Meal',
+    name: 'Krabby Meal',
     price: '3.50',
   },
   {
-    title: 'Double Krabby Meal',
+    name: 'Double Krabby Meal',
     price: '3.75',
   },
   {
-    title: 'Triple Krabby Meal',
+    name: 'Triple Krabby Meal',
     price: '4.00',
   },
   {
-    title: 'Salty Sea Dog',
+    name: 'Salty Sea Dog',
     price: '1.25',
   },
   {
-    title: 'Footlong',
+    name: 'Footlong',
     price: '2.00',
   },
   {
-    title: 'Sailors Surprise',
+    name: 'Sailors Surprise',
     price: '3.00',
   },
   {
-    title: 'Golden Loaf',
+    name: 'Golden Loaf',
     price: '2.00',
   },
   {
-    title: 'Coral Bits',
+    name: 'Coral Bits',
     price: '1.50',
   },
   {
-    title: 'Kelp Rings',
+    name: 'Kelp Rings',
     price: '1.50',
   },
   {
-    title: 'Seafoam Soda',
+    name: 'Seafoam Soda',
     price: '1.25',
   },
   {
-    title: 'Kelp Shake',
+    name: 'Kelp Shake',
     price: '2.00',
   },
 ];
