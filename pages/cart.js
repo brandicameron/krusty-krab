@@ -1,16 +1,18 @@
 import styles from '../styles/cart/Cart.module.css';
 import { useContext } from 'react';
 import { AppContext } from '../AppContext';
+import { menuItems } from '../data/menuItems';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Cart() {
   const { cartItems } = useContext(AppContext);
 
   const shoppingCart = Array.from(cartItems, ([key, value]) => {
-    return { name: key, quantity: value };
+    let itemPrice = menuItems.find((el) => el.name === key);
+    return { name: key, quantity: value, price: parseFloat(itemPrice.price) };
   });
 
-  //TODO: Add price to data attribute of buttons, then add price to Map and above array
+  const total = shoppingCart.reduce((total, obj) => parseFloat(obj.price) + total, 0);
 
   return (
     <section className={styles.cart}>
@@ -26,10 +28,15 @@ export default function Cart() {
                 <button>+</button>
               </div>
             </div>
-            <p>$6.00</p>
+            <p>${item.price.toFixed(2)}</p>
           </li>
         ))}
       </ul>
+      <div className={styles.total}>
+        <h3>Total</h3>
+        <p className={styles.totalPrice}>${total.toFixed(2)}</p>
+      </div>
+      <button className={styles.checkoutBtn}>Checkout</button>
     </section>
   );
 }

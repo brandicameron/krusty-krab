@@ -1,31 +1,26 @@
 .cart {
-  /* display: grid; */
-  /* place-content: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
-  height: calc(100vh - 115px);
+  width: min(350px, 80vw);
+  margin: 0 auto;
+  height: calc(90vh - 115px);
+  margin-top: 10vh;
 }
 
 .cart h1 {
   color: white;
   text-shadow: none;
   font-size: 5.5rem;
-  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
 .cart li {
   display: flex;
-  width: 80vw;
-  max-width: 350px;
   justify-content: space-between;
-  padding: 1rem 0;
-}
-
-.cart li {
+  width: min(350px, 80vw);
   border-bottom: 1px solid rgb(85, 176, 250);
+  padding: 1rem 0;
 }
 
 .quantity {
@@ -33,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--primaryColor);
-  border-radius: 10px;
+  border-radius: var(--borderRadius);
   padding: 0 1rem;
   margin-top: 0.5rem;
   width: 100px;
@@ -53,9 +48,33 @@
   padding-bottom: 5px;
 }
 
-/* This is sloppy as hell, fix it */
+.total {
+  display: flex;
+  justify-content: space-between;
+  width: min(350px, 80vw);
+  font-size: 2rem;
+}
+
+.totalPrice {
+  font-size: 2.25rem;
+}
+
+.checkoutBtn {
+  background-color: var(--primaryColor);
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  padding: 0.5rem 0;
+  margin-top: 1.5rem;
+}
+
 @media screen and (max-width: 900px) {
   .cart {
-    margin-top: -4rem;
+    margin-top: 0;
+  }
+
+  .cart h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
   }
 }
