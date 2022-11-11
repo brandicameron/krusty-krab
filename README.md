@@ -14,7 +14,7 @@ Check out the _Men in Black_ agent portal website here!
 
 ## Things Learned:
 
-- Nothing yet lol...
+- Used "grid-template-areas" for the first time — so cool & powerful!!
 
 ---
 
