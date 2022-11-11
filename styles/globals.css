@@ -21,13 +21,6 @@
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  /* height: 100vh; */
-  /* allows 100vh to work properly on android phones, while still applying the fill available fix on ios */
-  /* max-height: -webkit-fill-available; */
-}
-
 body {
   font-family: 'Palanquin Dark', sans-serif;
   line-height: 1.5;

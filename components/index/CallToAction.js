@@ -2,7 +2,7 @@ import styles from '../../styles/index/CallToAction.module.css';
 import Image from 'next/image';
 import CoralBits from '../../public/images/coral-bits.png';
 
-export default function CallToAction() {
+export default function CallToAction({ setNumItemsInCart }) {
   return (
     <article className={styles.callToAction}>
       <Image src={CoralBits} alt="Don't forget a side of Coral Bits!" />

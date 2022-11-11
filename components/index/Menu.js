@@ -1,21 +1,14 @@
 import styles from '../../styles/index/Menu.module.css';
+import Image from 'next/image';
+import KelpShake from '../../public/images/kelp-shake.png';
 
 export default function Menu() {
   return (
     <section className={styles.menuContainer}>
       <h1 className='display-text'>Galley Grub</h1>
       <div className={styles.menu}>
-        <ul className={styles.menuItems}>
-          {menuItems.slice(0, 5).map((item) => (
-            <li key={item.title}>
-              <h2>{item.title}</h2>
-              <span className={styles.dotLeaders}></span>
-              <p>{item.price}</p>
-            </li>
-          ))}
-        </ul>
-        <ul className={styles.menuItems}>
-          {menuItems.slice(5, 10).map((item) => (
+        <ul className={`${styles.menuItems} ${styles.columns}`}>
+          {menuItems.slice(0, 10).map((item) => (
             <li key={item.title}>
               <h2>{item.title}</h2>
               <span className={styles.dotLeaders}></span>
@@ -67,6 +60,7 @@ export default function Menu() {
         <ul className={styles.menuItems}>
           {menuItems.slice(12, 13).map((item) => (
             <li key={item.title}>
+              <Image className={styles.kelpShake} src={KelpShake} alt='Delicious Kelp Shake' />
               <h2>{item.title}</h2>
               <span className={styles.dotLeaders}></span>
               <p>{item.price}</p>

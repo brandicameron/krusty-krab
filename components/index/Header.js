@@ -2,7 +2,7 @@ import styles from '../../styles/index/Header.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Header() {
+export default function Header({ numItemsInCart }) {
   return (
     <header className={styles.header}>
       <Link href='/' className={styles.logo}>
@@ -28,7 +28,7 @@ export default function Header() {
           <li className={styles.cartContainer}>
             <Link href='/'>
               <img src='./images/cart.svg' alt='Shopping Cart' />
-              <small className={styles.numItemsInCart}>2</small>
+              <small className={styles.numItemsInCart}>{numItemsInCart}</small>
             </Link>
           </li>
         </ul>

@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css';
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Light from '../public/images/light.png';
@@ -7,8 +8,11 @@ import Banner from '../components/index/Banner';
 import CallToAction from '../components/index/CallToAction';
 import Menu from '../components/index/Menu';
 import Employee from '../components/index/Employee';
+import Footer from '../components/shared/Footer';
 
 export default function Home() {
+  const [numItemsInCart, setNumItemsInCart] = useState(0);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -29,11 +33,12 @@ export default function Home() {
         Skip to content
       </a>
       <Image priority className={styles.light} src={Light} alt='' />
-      <Header />
-      <Banner />
-      <CallToAction />
+      <Header numItemsInCart={numItemsInCart} />
+      <Banner setNumItemsInCart={setNumItemsInCart} />
+      <CallToAction setNumItemsInCart={setNumItemsInCart} />
       <Menu />
       <Employee />
+      <Footer />
     </div>
   );
 }

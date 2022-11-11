@@ -8,12 +8,24 @@
   display: grid;
   width: min(1100px, 90vw);
   align-items: center;
+  justify-content: center;
   gap: 2rem;
   text-align: center;
   grid-template-areas:
     'pattyImg heading'
     'pattyImg pText'
     'pattyImg button';
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: fade-in 300ms linear forwards;
+  animation-delay: 500ms;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .content h1 {
