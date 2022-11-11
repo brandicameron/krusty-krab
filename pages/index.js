@@ -12,6 +12,9 @@ import Footer from '../components/shared/Footer';
 
 export default function Home() {
   const [numItemsInCart, setNumItemsInCart] = useState(0);
+  const [cartItems, setCartItems] = useState(new Map());
+
+  console.log(cartItems);
 
   return (
     <div className={styles.container}>
@@ -34,8 +37,16 @@ export default function Home() {
       </a>
       <Image priority className={styles.light} src={Light} alt='' />
       <Header numItemsInCart={numItemsInCart} />
-      <Banner setNumItemsInCart={setNumItemsInCart} />
-      <CallToAction setNumItemsInCart={setNumItemsInCart} />
+      <Banner
+        setNumItemsInCart={setNumItemsInCart}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
+      <CallToAction
+        setNumItemsInCart={setNumItemsInCart}
+        cartItems={cartItems}
+        setCartItems={setCartItems}
+      />
       <Menu />
       <Employee />
       <Footer />
