@@ -4,7 +4,7 @@
   align-items: center;
   width: min(350px, 80vw);
   margin: 0 auto;
-  height: calc(90vh - 115px);
+  /* height: calc(90vh - 115px); */
   margin-top: 10vh;
 }
 

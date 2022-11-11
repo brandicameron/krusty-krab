@@ -5,13 +5,15 @@ import Image from 'next/image';
 import KelpShake from '../../public/images/kelp-shake.png';
 import { menuItems } from '../../data/menuItems';
 import { useAddToCart } from '../../hooks/useAddToCart';
+import AddedToCartModal from '../shared/AddedToCartModal';
 
 export default function Menu() {
   const { cartItems, setCartItems } = useContext(AppContext);
-  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
+  const { handleAddToCart, addedToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
     <section className={styles.menuContainer} id='menu'>
+      {addedToCart && <AddedToCartModal />}
       <h1 className='display-text'>Galley Grub</h1>
       <h2>Click an item to add to cart.</h2>
       <div className={styles.menu}>

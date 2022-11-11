@@ -1,0 +1,43 @@
+.successModal {
+  position: fixed;
+  display: grid;
+  place-content: center;
+  width: 80vw;
+  height: 50vh;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 25vh;
+  background: rgba(0 192 250 / 70%);
+  border-radius: var(--borderRadius);
+  z-index: 20;
+  opacity: 0;
+  animation: fade-in 150ms linear forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+.successModal p {
+  background-color: var(--successColor);
+  padding: 1rem 2rem;
+  border-radius: var(--borderRadius);
+  transform: scale(0);
+  animation: grow 75ms linear forwards;
+  animation-delay: 50ms;
+}
+
+@keyframes grow {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .successModal {
+    width: 100vw;
+    height: 30vh;
+  }
+}
