@@ -24,6 +24,7 @@
   position: relative;
   display: grid;
   place-items: center;
+  text-align: center;
   background-color: var(--successColor);
   padding: 1rem 2rem;
   border-radius: var(--borderRadius);
@@ -40,6 +41,7 @@
 
 .successModalContent img {
   width: 50px;
+  margin-bottom: 0.5rem;
 }
 
 .addSign {
@@ -70,5 +72,14 @@
     width: 90vw;
     padding: 2rem;
     box-shadow: 2.5rem 3.75rem 3rem -3rem rgba(0 0 0 / 30%);
+  }
+
+  .successModalContent p {
+    max-width: 200px;
+    line-height: 1.2;
+  }
+
+  .addSign {
+    top: 33px;
   }
 }
