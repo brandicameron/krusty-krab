@@ -22,7 +22,12 @@ export default function Footer() {
       <Image className={styles.coralPurple} src={CoralPurple} alt='' />
       <Image className={styles.coralOrange} src={CoralOrange} alt='' />
       <Image className={styles.seaLeaf2} src={SeaLeaf} alt='' />
-      <Image className={styles.bubble1} src={Bubble} alt='' />
+      <div className={styles.bubbles}>
+        <Image className={styles.bubble1} src={Bubble} alt='' />
+        <Image className={styles.bubble2} src={Bubble} alt='' />
+        <Image className={styles.bubble3} src={Bubble} alt='' />
+        <Image className={styles.bubble4} src={Bubble} alt='' />
+      </div>
     </footer>
   );
 }
