@@ -1,11 +1,11 @@
 import styles from '../../styles/index/Banner.module.css';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
+import { useAddToCart } from '../../hooks/useAddToCart';
 
 export default function Banner({ setNumItemsInCart }) {
-  const handleAddToCart = () => {
-    setNumItemsInCart((prev) => prev + 1);
-  };
+  const { handleAddToCart } = useAddToCart(setNumItemsInCart);
+
   return (
     <section className={styles.banner} id='skip-target'>
       <div className={styles.content}>
