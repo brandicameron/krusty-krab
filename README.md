@@ -15,6 +15,7 @@ Check out the _Men in Black_ agent portal website here!
 ## Things Learned:
 
 - Used "grid-template-areas" for the first time — so cool & powerful!!
+- Learned about "e.currentTarget", which was fixed a bug where the "Coral Bits" cart button was returning a data attribute value of "null"
 
 ---
 

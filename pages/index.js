@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Light from '../public/images/light.png';
@@ -13,6 +13,11 @@ import Footer from '../components/shared/Footer';
 export default function Home() {
   const [numItemsInCart, setNumItemsInCart] = useState(0);
   const [cartItems, setCartItems] = useState(new Map());
+
+  // useEffect(() => {
+  //   const sum = Object.values(cartItems).reduce((acc, val) => acc + val, 0);
+  //   setNumItemsInCart(sum);
+  // }, [cartItems]);
 
   console.log(cartItems);
 

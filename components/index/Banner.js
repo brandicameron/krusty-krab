@@ -16,7 +16,7 @@ export default function Banner({ setNumItemsInCart, cartItems, setCartItems }) {
           The world famous secret formula Krabby Patty — you'll fall in love at first bite. Try it
           with cheese!
         </p>
-        <button onClick={handleAddToCart} value='Krabby Patty'>
+        <button onClick={handleAddToCart} data-value='Krabby Patty'>
           Order Now!
         </button>
         <Image src={KrabbyPatty} alt='The World Famous Krabby Patty' priority />

@@ -7,7 +7,7 @@ export default function Header({ numItemsInCart }) {
     <header className={styles.header}>
       <Link href='/' className={styles.logo}>
         <Image
-          src='/./images/krusty-krab-logo.png'
+          src='/images/krusty-krab-logo.png'
           alt='Krusty Krab Logo'
           width={200}
           height={160}
