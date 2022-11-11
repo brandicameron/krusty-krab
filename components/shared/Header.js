@@ -1,8 +1,12 @@
 import styles from '../../styles/shared/Header.module.css';
+import { useContext } from 'react';
+import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Header({ numItemsInCart }) {
+export default function Header() {
+  const { numItemsInCart } = useContext(AppContext);
+
   return (
     <header className={styles.header}>
       <a className='skip-to-content-link' href='#skip-target'>

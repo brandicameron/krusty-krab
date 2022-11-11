@@ -1,9 +1,12 @@
 import styles from '../../styles/index/Banner.module.css';
+import { useContext } from 'react';
+import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
-export default function Banner({ cartItems, setCartItems }) {
+export default function Banner() {
+  const { cartItems, setCartItems } = useContext(AppContext);
   const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (

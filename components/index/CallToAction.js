@@ -1,9 +1,12 @@
 import styles from '../../styles/index/CallToAction.module.css';
+import { useContext } from 'react';
+import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import CoralBits from '../../public/images/coral-bits.png';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
-export default function CallToAction({ cartItems, setCartItems }) {
+export default function CallToAction() {
+  const { cartItems, setCartItems } = useContext(AppContext);
   const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
