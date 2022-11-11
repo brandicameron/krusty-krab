@@ -1,10 +1,13 @@
-import styles from '../../styles/index/Header.module.css';
+import styles from '../../styles/shared/Header.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header({ numItemsInCart }) {
   return (
     <header className={styles.header}>
+      <a className='skip-to-content-link' href='#skip-target'>
+        Skip to content
+      </a>
       <Link href='/' className={styles.logo}>
         <Image
           src='/images/krusty-krab-logo.png'

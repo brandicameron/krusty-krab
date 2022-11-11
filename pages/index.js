@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Light from '../public/images/light.png';
-import Header from '../components/index/Header';
+import Header from '../components/shared/Header';
 import Banner from '../components/index/Banner';
 import CallToAction from '../components/index/CallToAction';
 import Menu from '../components/index/Menu';
@@ -37,10 +37,6 @@ export default function Home() {
         />
         <meta property='og:image' content='/share.jpg' />
       </Head>
-
-      <a className='skip-to-content-link' href='#skip-target'>
-        Skip to content
-      </a>
       <Image priority className={styles.light} src={Light} alt='' />
       <Header numItemsInCart={numItemsInCart} />
       <Banner cartItems={cartItems} setCartItems={setCartItems} />
