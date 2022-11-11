@@ -9,17 +9,6 @@ import Menu from '../components/index/Menu';
 import Employee from '../components/index/Employee';
 
 export default function Home() {
-  // const [numItemsInCart, setNumItemsInCart] = useState(0);
-  // const [cartItems, setCartItems] = useState(new Map());
-
-  // useEffect(() => {
-  //   let sum = 0;
-  //   cartItems.forEach((value) => {
-  //     sum += value;
-  //   });
-  //   setNumItemsInCart(sum);
-  // }, [cartItems]);
-
   return (
     <div className={styles.container}>
       <Head>

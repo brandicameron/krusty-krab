@@ -33,7 +33,7 @@ export default function Header() {
             <Link href='/'>Our Team</Link>
           </li>
           <li className={styles.cartContainer}>
-            <Link href='/'>
+            <Link href='cart'>
               <img src='./images/cart.svg' alt='Shopping Cart' />
               <small className={styles.numItemsInCart}>{numItemsInCart}</small>
             </Link>
