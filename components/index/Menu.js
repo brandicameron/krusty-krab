@@ -11,7 +11,7 @@ export default function Menu() {
   const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
-    <section className={styles.menuContainer}>
+    <section className={styles.menuContainer} id='menu'>
       <h1 className='display-text'>Galley Grub</h1>
       <h2>Click an item to add to cart.</h2>
       <div className={styles.menu}>

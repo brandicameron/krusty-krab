@@ -22,12 +22,17 @@ export default function Header() {
         />
       </Link>
       <nav>
+        {/* Adding scroll={false} makes smooth scrolling work again */}
         <ul>
           <li>
-            <a href='/'>Menu</a>
+            <Link href='/#menu' scroll={false}>
+              Menu
+            </Link>
           </li>
           <li>
-            <a href='/'>Location</a>
+            <Link href='/#footer' scroll={false}>
+              Location
+            </Link>
           </li>
           <li>
             <Link href='/'>Our Team</Link>
