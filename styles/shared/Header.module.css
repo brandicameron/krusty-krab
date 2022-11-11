@@ -38,7 +38,7 @@
   place-content: center;
   right: 3vw;
   z-index: 10;
-  background-color: #00c0fa;
+  background-color: rgb(0, 192, 250, 90%);
   border-radius: 50%;
   width: 45px;
   height: 45px;
