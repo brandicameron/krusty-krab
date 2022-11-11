@@ -14,6 +14,7 @@ export default function Menu() {
   return (
     <section className={styles.menuContainer} id='menu'>
       {addedToCart && <AddedToCartModal />}
+      <AddedToCartModal />
       <h1 className='display-text'>Galley Grub</h1>
       <h2>Click an item to add to cart.</h2>
       <div className={styles.menu}>

@@ -17,7 +17,9 @@ export default function Banner() {
         <h1>
           The Original <span className='display-text'>Krabby Patty</span>
         </h1>
-        <p>The world famous secret formula Krabby Patty — you'll fall in love at first bite.</p>
+        <p>
+          The world famous secret formula Krabby Patty — you&apos;ll fall in love at first bite.
+        </p>
         <button onClick={handleAddToCart} data-value='Krabby Patty'>
           Add to cart
         </button>
