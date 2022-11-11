@@ -31,8 +31,9 @@
   line-height: 1.3;
 }
 
-.footer address {
-  margin-bottom: 2.5rem;
+.footer a {
+  margin: 0.5rem 0 2.5rem 0;
+  text-decoration: underline;
 }
 
 .footer small {

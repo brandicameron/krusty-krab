@@ -15,6 +15,9 @@ export default function Footer() {
         Float <br className={styles.mobileBreak} /> on over!
       </h2>
       <address>Bikini Bottom, 11.6065° N, 165.3768° E</address>
+      <a href='https://www.google.com/maps/dir//%2711.6065142,165.3768099%27' target='blank'>
+        View Map
+      </a>
       <p>Open 7 Days a Week</p>
       <time>10am — 9pm</time>
       <small>&copy; {year} Krusty Krab</small>

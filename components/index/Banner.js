@@ -13,7 +13,6 @@ export default function Banner() {
   return (
     <section className={styles.banner} id='skip-target'>
       {addedToCart && <AddedToCartModal />}
-      {/* <AddedToCartModal /> */}
       <div className={styles.content}>
         <h1>
           The Original <span className='display-text'>Krabby Patty</span>

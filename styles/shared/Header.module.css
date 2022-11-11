@@ -64,6 +64,7 @@
   padding-bottom: 3px;
   border-radius: 50%;
   background-color: var(--primaryColor);
+  transition: transform 100ms linear;
 }
 
 @media screen and (max-width: 1100px) {
