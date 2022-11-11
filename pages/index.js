@@ -14,12 +14,17 @@ export default function Home() {
   const [numItemsInCart, setNumItemsInCart] = useState(0);
   const [cartItems, setCartItems] = useState(new Map());
 
-  // useEffect(() => {
-  //   const sum = Object.values(cartItems).reduce((acc, val) => acc + val, 0);
-  //   setNumItemsInCart(sum);
-  // }, [cartItems]);
+  useEffect(() => {
+    let sum = 0;
+    cartItems.forEach((value) => {
+      sum += value;
+    });
+    setNumItemsInCart(sum);
+  }, [cartItems]);
 
   console.log(cartItems);
+
+  console.log(numItemsInCart);
 
   return (
     <div className={styles.container}>
@@ -42,16 +47,8 @@ export default function Home() {
       </a>
       <Image priority className={styles.light} src={Light} alt='' />
       <Header numItemsInCart={numItemsInCart} />
-      <Banner
-        setNumItemsInCart={setNumItemsInCart}
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-      />
-      <CallToAction
-        setNumItemsInCart={setNumItemsInCart}
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-      />
+      <Banner cartItems={cartItems} setCartItems={setCartItems} />
+      <CallToAction cartItems={cartItems} setCartItems={setCartItems} />
       <Menu />
       <Employee />
       <Footer />

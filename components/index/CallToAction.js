@@ -3,8 +3,8 @@ import Image from 'next/image';
 import CoralBits from '../../public/images/coral-bits.png';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
-export default function CallToAction({ setNumItemsInCart, cartItems, setCartItems }) {
-  const { handleAddToCart } = useAddToCart(setNumItemsInCart, cartItems, setCartItems);
+export default function CallToAction({ cartItems, setCartItems }) {
+  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
     <article className={styles.callToAction}>

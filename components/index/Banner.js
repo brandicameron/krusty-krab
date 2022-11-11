@@ -3,8 +3,8 @@ import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
-export default function Banner({ setNumItemsInCart, cartItems, setCartItems }) {
-  const { handleAddToCart } = useAddToCart(setNumItemsInCart, cartItems, setCartItems);
+export default function Banner({ cartItems, setCartItems }) {
+  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
     <section className={styles.banner} id='skip-target'>
