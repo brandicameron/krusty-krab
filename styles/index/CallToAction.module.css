@@ -21,7 +21,7 @@
   position: relative;
   height: 50px;
   width: 50px;
-  background-color: var(--secondaryColor);
+  background-color: var(--primaryColor);
   border-radius: 1rem;
   box-shadow: 4px 4px var(--white);
 }
