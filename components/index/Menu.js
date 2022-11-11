@@ -16,38 +16,6 @@ export default function Menu() {
             </li>
           ))}
         </ul>
-        <ul className={styles.nestedItems}>
-          {menuItems.slice(-2, -1).map((item) => (
-            <li key={item.title}>
-              <h2>{item.title}</h2>
-              <ul className={styles.sizes}>
-                {item.sizes.map((size) => (
-                  <li key={size.size}>
-                    <h2>{size.size}</h2>
-                    <span className={styles.dotLeaders}></span>
-                    <p>{size.price}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-        <ul className={styles.nestedItems}>
-          {menuItems.slice(-1).map((item) => (
-            <li key={item.title}>
-              <h2>{item.title}</h2>
-              <ul className={styles.sizes}>
-                {item.sizes.map((size) => (
-                  <li key={size.size}>
-                    <h2>{size.size}</h2>
-                    <span className={styles.dotLeaders}></span>
-                    <p>{size.price}</p>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
         <ul className={styles.menuItems}>
           {menuItems.slice(10, 12).map((item) => (
             <li key={item.title}>
@@ -58,7 +26,7 @@ export default function Menu() {
           ))}
         </ul>
         <ul className={styles.menuItems}>
-          {menuItems.slice(12, 13).map((item) => (
+          {menuItems.slice(12, 14).map((item) => (
             <li key={item.title}>
               <Image className={styles.kelpShake} src={KelpShake} alt='Delicious Kelp Shake' />
               <h2>{item.title}</h2>
@@ -114,49 +82,19 @@ const menuItems = [
     price: '2.00',
   },
   {
+    title: 'Coral Bits',
+    price: '1.50',
+  },
+  {
     title: 'Kelp Rings',
     price: '1.50',
   },
   {
-    title: 'Salty Sauce',
-    price: '.50',
+    title: 'Seafoam Soda',
+    price: '1.25',
   },
   {
     title: 'Kelp Shake',
     price: '2.00',
-  },
-  {
-    title: 'Coral Bits',
-    sizes: [
-      {
-        size: 'Small',
-        price: '1.00',
-      },
-      {
-        size: 'Medium',
-        price: '1.25',
-      },
-      {
-        size: 'Large',
-        price: '1.50',
-      },
-    ],
-  },
-  {
-    title: 'Seafoam Soda',
-    sizes: [
-      {
-        size: 'Small',
-        price: '1.00',
-      },
-      {
-        size: 'Medium',
-        price: '1.25',
-      },
-      {
-        size: 'Large',
-        price: '1.50',
-      },
-    ],
   },
 ];
