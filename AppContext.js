@@ -5,6 +5,7 @@ export const AppContext = createContext();
 export function AppContextWrapper({ children }) {
   const [numItemsInCart, setNumItemsInCart] = useState(0);
   const [cartItems, setCartItems] = useState(new Map());
+  const [itemName, setItemName] = useState('');
 
   useEffect(() => {
     let sum = 0;
@@ -15,7 +16,9 @@ export function AppContextWrapper({ children }) {
   }, [cartItems]);
 
   return (
-    <AppContext.Provider value={{ numItemsInCart, setNumItemsInCart, cartItems, setCartItems }}>
+    <AppContext.Provider
+      value={{ numItemsInCart, setNumItemsInCart, cartItems, setCartItems, itemName, setItemName }}
+    >
       {children}
     </AppContext.Provider>
   );

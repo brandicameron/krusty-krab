@@ -20,7 +20,10 @@
   }
 }
 
-.successModal p {
+.successModalContent {
+  position: relative;
+  display: grid;
+  place-items: center;
   background-color: var(--successColor);
   padding: 1rem 2rem;
   border-radius: var(--borderRadius);
@@ -32,6 +35,26 @@
 @keyframes grow {
   100% {
     transform: scale(1);
+  }
+}
+
+.successModalContent img {
+  width: 50px;
+}
+
+.addSign {
+  position: absolute;
+  top: 15px;
+  left: 49%;
+  font-size: 1.2rem;
+  transform: translateY(-25px);
+  animation: drop 125ms ease-out forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes drop {
+  100% {
+    transform: translateY(0);
   }
 }
 
