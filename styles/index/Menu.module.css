@@ -70,6 +70,22 @@
   right: -50px;
   top: -10px;
   transform: rotate(7deg);
+  animation: shake 200ms 2 linear forwards;
+}
+
+@keyframes shake {
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(7deg);
+  }
 }
 
 @media screen and (max-width: 900px) {
