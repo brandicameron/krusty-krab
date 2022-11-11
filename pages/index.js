@@ -22,10 +22,6 @@ export default function Home() {
     setNumItemsInCart(sum);
   }, [cartItems]);
 
-  console.log(cartItems);
-
-  console.log(numItemsInCart);
-
   return (
     <div className={styles.container}>
       <Head>
