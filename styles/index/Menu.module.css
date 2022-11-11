@@ -82,8 +82,12 @@
 }
 
 @media screen and (max-width: 900px) {
+  .menuContainer {
+    margin: 5rem auto 2rem auto;
+  }
+
   .menuContainer h1 {
-    margin: 4rem 0 3rem 0;
+    margin: 4rem 0 2rem 0;
   }
 
   .menu {
@@ -104,8 +108,17 @@
     margin-top: 0.75rem;
   }
 
-  .nestedItems {
-    padding: 1.5rem 1rem;
+  .menuContainer h2 {
+    font-size: 1.3rem;
+    margin: 1rem 0 2.5rem 0;
+  }
+
+  .menuItems li button {
+    font-size: 1.1rem;
+  }
+
+  .menuItems li button p {
+    font-size: 1.4rem;
   }
 
   .kelpShake {
