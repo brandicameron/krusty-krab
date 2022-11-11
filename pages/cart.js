@@ -21,30 +21,32 @@ export default function Cart() {
   };
 
   return (
-    <section className={styles.cart}>
-      <h1 className='display-text'>Your Cart</h1>
-      <ul>
-        {shoppingCart.map((item) => (
-          <li key={uuidv4()}>
-            <div>
-              <h2>{item.name}</h2>
-              <div className={styles.quantity}>
-                <button>-</button>
-                <p>{item.quantity}</p>
-                <button>+</button>
+    <div className={styles.container}>
+      <section className={styles.cart}>
+        <h1 className='display-text'>Your Cart</h1>
+        <ul>
+          {shoppingCart.map((item) => (
+            <li key={uuidv4()}>
+              <div>
+                <h2>{item.name}</h2>
+                <div className={styles.quantity}>
+                  <button>-</button>
+                  <p>{item.quantity}</p>
+                  <button>+</button>
+                </div>
               </div>
-            </div>
-            <p>${item.price.toFixed(2)}</p>
-          </li>
-        ))}
-      </ul>
-      <div className={styles.total}>
-        <h3>Total</h3>
-        <p className={styles.totalPrice}>${total.toFixed(2)}</p>
-      </div>
-      <Link href='checkout' className={styles.checkoutBtn}>
-        Checkout
-      </Link>
-    </section>
+              <p>${item.price.toFixed(2)}</p>
+            </li>
+          ))}
+        </ul>
+        <div className={styles.total}>
+          <h3>Total</h3>
+          <p className={styles.totalPrice}>${total.toFixed(2)}</p>
+        </div>
+        <Link href='checkout' className={styles.checkoutBtn}>
+          Checkout
+        </Link>
+      </section>
+    </div>
   );
 }

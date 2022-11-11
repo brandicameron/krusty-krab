@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
+  margin-bottom: auto;
 }
 
 .footer h2 {

@@ -1,11 +1,16 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 115px);
+}
+
 .cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: min(350px, 80vw);
-  margin: 0 auto;
-  /* height: calc(90vh - 115px); */
-  margin-top: 10vh;
+  margin: 10vh auto 0 auto;
+  flex: 1;
 }
 
 .cart h1 {
