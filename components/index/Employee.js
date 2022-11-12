@@ -8,7 +8,7 @@ export default function Employee() {
       <h1 className='display-text'>Employee of the Month</h1>
       <figure>
         <Image src={employeeOfMonthPic} alt='' />
-        <figcaption>Spongebob Squarepants</figcaption>
+        <figcaption>SpongeBob SquarePants</figcaption>
       </figure>
     </section>
   );
