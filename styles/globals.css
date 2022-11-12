@@ -50,6 +50,7 @@ a {
 button {
   border: none;
   cursor: pointer;
+  background-color: transparent;
   /* font-family: var(--displayFont); */
 }
 

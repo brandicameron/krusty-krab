@@ -5,8 +5,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const [newItemAdded, setNewItemAdded] = useState(false);
   const { numItemsInCart } = useContext(AppContext);
+
+  const handleOpenMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+  };
 
   // Makes number bubble above cart animate when new item added
   useEffect(() => {
@@ -34,35 +43,43 @@ export default function Header() {
           priority
         />
       </Link>
-      <nav>
+      <nav className={styles.navigation}>
+        <button
+          className={menuOpen ? `${styles.hamburgerBtn} ${styles.slideIn}` : styles.hamburgerBtn}
+          onClick={handleOpenMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         {/* Adding scroll={false} makes smooth scrolling work again */}
-        <ul>
-          <li>
+        <ul className={menuOpen ? styles.slideIn : ''}>
+          <li onClick={handleCloseMenu}>
             <Link href='/#menu' scroll={false}>
               Menu
             </Link>
           </li>
-          <li>
+          <li onClick={handleCloseMenu}>
             <Link href='/#footer' scroll={false}>
               Location
             </Link>
           </li>
-          <li>
+          <li onClick={handleCloseMenu}>
             <Link href='/'>Our Team</Link>
-          </li>
-          <li className={styles.cartContainer}>
-            <Link href='cart'>
-              <img src='./images/cart.svg' alt='Shopping Cart' />
-              <small
-                className={styles.numItemsInCart}
-                style={{ transform: newItemAdded ? 'scale(1.2)' : 'scale(1)' }}
-              >
-                {numItemsInCart}
-              </small>
-            </Link>
           </li>
         </ul>
       </nav>
+      <div className={styles.cartContainer}>
+        <Link href='cart'>
+          <img src='./images/cart.svg' alt='Shopping Cart' />
+          <small
+            className={styles.numItemsInCart}
+            style={{ transform: newItemAdded ? 'scale(1.2)' : 'scale(1)' }}
+          >
+            {numItemsInCart}
+          </small>
+        </Link>
+      </div>
     </header>
   );
 }
