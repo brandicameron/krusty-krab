@@ -47,10 +47,6 @@
   margin-top: 1rem;
 }
 
-.menuItems li button h3 {
-  line-height: 1.2;
-}
-
 .dotLeaders {
   border-bottom: 2px dotted var(--white);
   flex: 1;
@@ -90,6 +86,11 @@
     margin: 4rem 0 2rem 0;
   }
 
+  .menuContainer h2 {
+    font-size: 1.3rem;
+    margin: 1rem 0 2.5rem 0;
+  }
+
   .menu {
     grid-template-columns: 1fr;
     max-width: 700px;
@@ -104,21 +105,8 @@
     padding: 1.5rem 1rem;
   }
 
-  .menuItems li:not(:first-of-type) {
-    margin-top: 0.75rem;
-  }
-
-  .menuContainer h2 {
-    font-size: 1.3rem;
-    margin: 1rem 0 2.5rem 0;
-  }
-
   .menuItems li button {
-    font-size: 1.1rem;
-  }
-
-  .menuItems li button p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .kelpShake {

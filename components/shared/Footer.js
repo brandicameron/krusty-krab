@@ -19,7 +19,7 @@ export default function Footer() {
         View Map
       </a>
       <p>Open 7 Days a Week</p>
-      <time>10am — 9pm</time>
+      <p>10am — 9pm</p>
       <small>&copy; {year} Krusty Krab</small>
       <Image className={styles.seaLeaf} src={SeaLeaf} alt='' />
       <Image className={styles.coralPurple} src={CoralPurple} alt='' />

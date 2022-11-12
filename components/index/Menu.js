@@ -26,9 +26,9 @@ export default function Menu() {
                 onClick={handleAddToCart}
                 title={`Add ${item.name} to cart.`}
               >
-                <h3>{item.name}</h3>
+                <span>{item.name}</span>
                 <span className={styles.dotLeaders}></span>
-                <p>{item.price}</p>
+                <span>{item.price}</span>
               </button>
             </li>
           ))}
@@ -42,9 +42,9 @@ export default function Menu() {
                 onClick={handleAddToCart}
                 title={`Add ${item.name} to cart.`}
               >
-                <h3>{item.name}</h3>
+                <span>{item.name}</span>
                 <span className={styles.dotLeaders}></span>
-                <p>{item.price}</p>
+                <span>{item.price}</span>
               </button>
             </li>
           ))}
@@ -59,9 +59,9 @@ export default function Menu() {
                 onClick={handleAddToCart}
                 title={`Add ${item.name} to cart.`}
               >
-                <h3>{item.name}</h3>
+                <span>{item.name}</span>
                 <span className={styles.dotLeaders}></span>
-                <p>{item.price}</p>
+                <span>{item.price}</span>
               </button>
             </li>
           ))}
