@@ -19,15 +19,21 @@
 }
 
 .employeeContainer figure {
-  margin: 1.5rem auto;
   text-align: center;
   font-size: 1.5rem;
+}
+
+.employeeContainer figure img {
+  /* Better fit for xs mobile screens */
+  width: min(325px, 85vw);
+  object-fit: contain;
 }
 
 @media screen and (max-width: 600px) {
   .employeeContainer {
     height: 850px;
   }
+
   .employeeContainer h1 {
     font-size: 3.5rem;
     padding-top: 5rem;
