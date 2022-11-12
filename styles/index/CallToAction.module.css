@@ -17,26 +17,6 @@
   color: var(--secondaryColor);
 }
 
-.callToAction button {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  background-color: var(--primaryColor);
-  border-radius: 1rem;
-  box-shadow: 4px 4px var(--white);
-}
-
-.callToAction button img {
-  margin-top: 5px;
-}
-
-.callToAction button:hover {
-  box-shadow: 5px 5px var(--white);
-}
-.callToAction button:active {
-  box-shadow: 2px 2px var(--white);
-}
-
 @media screen and (max-width: 900px) {
   .callToAction {
     flex-wrap: wrap;

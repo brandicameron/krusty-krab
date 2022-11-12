@@ -15,7 +15,7 @@ export default function CallToAction() {
       {addedToCart && <AddedToCartModal />}
       <Image src={CoralBits} alt="Don't forget a side of Coral Bits!" />
       <h2>Don&apos;t forget a side of Coral Bits!</h2>
-      <button onClick={handleAddToCart} data-value='Coral Bits'>
+      <button onClick={handleAddToCart} data-value='Coral Bits' className='primary-button-sq'>
         <img height='25' width='25' src='./images/cart-add.svg' alt='Add to Cart' />
       </button>
     </article>

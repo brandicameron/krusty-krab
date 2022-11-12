@@ -66,21 +66,6 @@
   font-size: 2.25rem;
 }
 
-.checkoutBtn {
-  background-color: var(--primaryColor);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100%;
-  border-radius: var(--borderRadius);
-  padding: 0.5rem 0 0.75rem 0;
-  margin-top: 1.5rem;
-  transition: filter 150ms linear;
-}
-
-.checkoutBtn:hover {
-  filter: brightness(1.1);
-}
-
 @media screen and (max-width: 900px) {
   .cart {
     margin-top: 0;

@@ -64,7 +64,7 @@ export default function Cart() {
           <h3>Total</h3>
           <p className={styles.totalPrice}>${total.toFixed(2)}</p>
         </div>
-        <Link href='checkout' className={styles.checkoutBtn}>
+        <Link href='checkout' className='primary-button primary-button-mt'>
           Checkout
         </Link>
       </section>

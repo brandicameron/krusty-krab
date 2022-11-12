@@ -8,7 +8,7 @@
   --successColor: #2ab81b;
   --white: #fff;
   --gradient: linear-gradient(to top, #015eea, #00c0fa);
-  --borderRadius: 10px;
+  --borderRadius: 20px;
   --displayFont: 'Londrina Solid', sans-serif;
   --shadowColor: rgb(9, 65, 226, 70%);
   --textShadow: 1px 1px 0px var(--white), 2px 2px 0px var(--white), 3px 3px 0px var(--white),
@@ -50,7 +50,7 @@ a {
 button {
   border: none;
   cursor: pointer;
-  font-family: var(--displayFont);
+  /* font-family: var(--displayFont); */
 }
 
 button:focus-visible,
@@ -121,20 +121,52 @@ li {
 }
 
 .primary-button {
+  font-family: var(--displayFont);
   font-size: 2.5rem;
   max-width: 250px;
   margin: 0 auto;
   background-color: var(--primaryColor);
   padding: 0.25rem 2rem 0.5rem 2rem;
-  border-radius: 1.5rem;
+  border-radius: var(--borderRadius);
   transform: skew(-10deg) rotate(-5deg);
   box-shadow: 5px 5px var(--white);
-  transition: box-shadow 200ms linear;
+  transition: all 200ms linear;
 }
 
-.primary-button:hover {
-  box-shadow: 7px 7px var(--white);
-}
-.primary-button:active {
+.primary-button-sq {
+  background-color: var(--primaryColor);
+  width: 55px;
+  height: 55px;
+  padding-top: 6px;
+  border-radius: var(--borderRadius);
   box-shadow: 3px 3px var(--white);
+  transition: all 200ms linear;
+}
+
+.primary-button:hover,
+.primary-button-sq:hover {
+  box-shadow: 7px 7px var(--white);
+  filter: brightness(1.1);
+}
+.primary-button:active,
+.primary-sq-button:active {
+  box-shadow: 3px 3px var(--white);
+}
+
+.primary-button-mt {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .primary-button-sq {
+    width: 65px;
+    height: 65px;
+    padding-top: 20px;
+  }
+
+  .primary-button-sq img {
+    object-fit: contain;
+    height: 35px;
+    width: 35px;
+  }
 }
