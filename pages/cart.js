@@ -40,7 +40,7 @@ export default function Cart() {
   return (
     <div className={styles.container}>
       <section className={styles.cart}>
-        <h1 className='display-text'>Your Cart</h1>
+        <h1 className='display-text'>Cart</h1>
         <ul>
           {shoppingCart.map((item) => (
             <li key={uuidv4()}>
