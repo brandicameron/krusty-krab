@@ -87,7 +87,7 @@
   }
 
   .menuContainer h2 {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     margin: 1rem 0 2.5rem 0;
   }
 
@@ -106,10 +106,16 @@
   }
 
   .menuItems li button {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
   }
 
   .kelpShake {
     display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .menuItems li button {
+    font-size: 1.2rem;
   }
 }
