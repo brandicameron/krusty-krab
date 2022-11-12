@@ -22,6 +22,7 @@ Check out the _Men in Black_ agent portal website here!
 
 - Used "grid-template-areas" for the first time — so cool & powerful!!
 - Learned about "e.currentTarget", which was fixed a bug where the "Coral Bits" cart button was returning a data attribute value of "null"
+- I was unaware that p and header tags are not allowed inside a button. 🤨
 
   &nbsp;<br>
 
