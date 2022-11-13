@@ -6,6 +6,7 @@ import KelpShake from '../../public/images/kelp-shake.png';
 import { menuItems } from '../../data/menuItems';
 import { useAddToCart } from '../../hooks/useAddToCart';
 import AddedToCartModal from '../shared/AddedToCartModal';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function Menu() {
   const { cartItems, setCartItems } = useContext(AppContext);
@@ -19,7 +20,7 @@ export default function Menu() {
       <div className={styles.menu}>
         <ul className={`${styles.menuItems} ${styles.columns}`}>
           {menuItems.slice(0, 10).map((item) => (
-            <li key={item.name}>
+            <li key={uuidv4()}>
               <button
                 name={`Add ${item.name} to cart`}
                 data-value={item.name}
@@ -35,7 +36,7 @@ export default function Menu() {
         </ul>
         <ul className={styles.menuItems}>
           {menuItems.slice(10, 12).map((item) => (
-            <li key={item.name}>
+            <li key={uuidv4()}>
               <button
                 name={`Add ${item.name} to cart`}
                 data-value={item.name}
@@ -51,7 +52,7 @@ export default function Menu() {
         </ul>
         <ul className={styles.menuItems}>
           {menuItems.slice(12, 14).map((item) => (
-            <li key={item.name}>
+            <li key={uuidv4()}>
               <Image className={styles.kelpShake} src={KelpShake} alt='Delicious Kelp Shake' />
               <button
                 name={`Add ${item.name} to cart`}
