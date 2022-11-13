@@ -17,11 +17,11 @@
     'pattyImg button';
   opacity: 0;
   transform: translateY(1rem);
-  animation: fade-in 300ms linear forwards;
+  animation: fade-in-up 300ms linear forwards;
   animation-delay: 500ms;
 }
 
-@keyframes fade-in {
+@keyframes fade-in-up {
   100% {
     opacity: 1;
     transform: translateY(0);

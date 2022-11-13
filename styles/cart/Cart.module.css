@@ -2,6 +2,14 @@
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 115px);
+  opacity: 0;
+  animation: fade-in 100ms linear forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }
 
 .cart {
