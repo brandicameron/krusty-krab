@@ -10,7 +10,7 @@ export default function Footer() {
   const year = date.getFullYear();
 
   return (
-    <footer className={styles.footer} id='footer'>
+    <footer className={styles.footer} id='location'>
       <h2 className='display-text'>
         Float <br className={styles.mobileBreak} /> on over!
       </h2>

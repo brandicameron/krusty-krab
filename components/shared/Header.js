@@ -62,7 +62,7 @@ export default function Header() {
             </Link>
           </li>
           <li onClick={handleCloseMenu}>
-            <Link href='/#footer' scroll={false}>
+            <Link href='/#location' scroll={false}>
               Location
             </Link>
           </li>
