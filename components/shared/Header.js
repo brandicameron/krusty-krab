@@ -1,6 +1,7 @@
 import styles from '../../styles/shared/Header.module.css';
 import { useState, useEffect, useContext } from 'react';
 import { AppContext } from '../../AppContext';
+import Light from '../../public/images/light.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -31,6 +32,7 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <Image priority className={styles.light} src={Light} alt='' />
       <a className='skip-to-content-link' href='#skip-target'>
         Skip to content
       </a>
