@@ -4,6 +4,28 @@
   height: calc(100vh - 115px);
 }
 
+.flower1,
+.flower2,
+.flower3 {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.flower1 {
+  top: 15px;
+  left: 10px;
+}
+
+.flower2 {
+  right: 0;
+  bottom: 3vh;
+}
+
+.flower3 {
+  right: 5vw;
+  top: 15vh;
+}
+
 .content {
   display: grid;
   width: min(1100px, 90vw);
@@ -70,6 +92,12 @@
 @media screen and (max-width: 900px) {
   .banner {
     height: auto;
+  }
+
+  .flower1,
+  .flower2,
+  .flower3 {
+    display: none;
   }
 
   .content {

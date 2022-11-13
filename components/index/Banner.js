@@ -3,6 +3,9 @@ import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
+import Flower1 from '../../public/images/flower-1.svg';
+import Flower2 from '../../public/images/flower-2.svg';
+import Flower3 from '../../public/images/flower-3.svg';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
 export default function Banner() {
@@ -11,6 +14,9 @@ export default function Banner() {
 
   return (
     <section className={styles.banner} id='skip-target'>
+      <Image className={styles.flower1} src={Flower1} alt='' />
+      <Image className={styles.flower2} src={Flower2} alt='' />
+      <Image className={styles.flower3} src={Flower3} alt='' />
       <div className={styles.content}>
         <h1>
           Home of the original <span className='display-text'>Krabby Patty</span>
