@@ -9,6 +9,7 @@
   border-radius: 50%;
   width: 45px;
   height: 45px;
+  padding-top: 7px;
 }
 
 .cartContainer img {
@@ -42,6 +43,7 @@
     bottom: 0;
     border-radius: 0;
     border-top: 3px solid #00c0fae6;
+    padding-top: 0;
     box-shadow: -5px -5px 10px -7px rgba(0 0 0 / 30%);
   }
 
