@@ -1,9 +1,8 @@
-import { useState, useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { AppContext } from '../AppContext';
 
 export function useAddToCart(state, setState) {
-  const [addedToCart, setAddedToCart] = useState(false);
-  const { setItemName } = useContext(AppContext);
+  const { setItemName, addedToCart, setAddedToCart } = useContext(AppContext);
 
   useEffect(() => {
     if (addedToCart) {
@@ -24,5 +23,5 @@ export function useAddToCart(state, setState) {
     setAddedToCart(true);
   };
 
-  return { handleAddToCart, addedToCart };
+  return { handleAddToCart };
 }
