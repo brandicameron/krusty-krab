@@ -12,10 +12,9 @@
 }
 
 .cartContainer img {
-  width: 33px;
-  height: 33px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
-  padding-top: 5px;
 }
 
 .numItemsInCart {
@@ -37,7 +36,7 @@
 @media screen and (max-width: 1100px) {
   .cartContainer {
     width: 100vw;
-    height: 50px;
+    height: 55px;
     top: auto;
     right: 0;
     bottom: 0;
@@ -52,15 +51,15 @@
     place-content: center;
     width: 100vw;
   }
-
   .cartContainer img {
-    margin-top: 5px;
+    width: 40px;
+    height: 40px;
   }
 
   .numItemsInCart {
     left: 51%;
     transform: translateX(-51%);
-    top: 5px;
+    top: 0;
     width: 20px;
     height: 20px;
     padding-bottom: 3px;
