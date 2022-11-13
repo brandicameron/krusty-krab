@@ -15,7 +15,7 @@ export default function Banner() {
       {addedToCart && <AddedToCartModal />}
       <div className={styles.content}>
         <h1>
-          The Original <span className='display-text'>Krabby Patty</span>
+          Home of the original <span className='display-text'>Krabby Patty</span>
         </h1>
         <p>
           The world famous secret formula Krabby Patty — you&apos;ll fall in love at first bite.
