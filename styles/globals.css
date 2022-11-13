@@ -15,6 +15,8 @@
     4px 4px 0px var(--white), 5px 5px 0px var(--white);
 }
 
+/* Resets */
+
 * {
   margin: 0;
   padding: 0;
@@ -91,23 +93,6 @@ ul {
 
 li {
   padding: 0;
-}
-
-.skip-to-content-link {
-  position: absolute;
-  background: var(--primaryColor);
-  color: var(--white);
-  font-weight: bold;
-  border-radius: var(--borderRadius);
-  padding: 10px 15px;
-  margin: 10px;
-  z-index: 100;
-  border: 3px solid var(--white);
-  transform: translateY(-500%);
-}
-
-.skip-to-content-link:focus {
-  transform: translateY(0%);
 }
 
 /* Utilities */

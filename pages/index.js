@@ -21,6 +21,7 @@ export default function Home() {
         />
         <meta property='og:image' content='/share.jpg' />
       </Head>
+
       <Banner />
       <CallToAction />
       <Menu />
