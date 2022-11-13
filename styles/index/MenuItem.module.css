@@ -1,0 +1,32 @@
+.menuItem button {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: transparent;
+  font-family: 'Palanquin Dark', sans-serif;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+.menuItem:not(:first-of-type) {
+  margin-top: 1rem;
+}
+
+.dotLeaders {
+  border-bottom: 2px dotted var(--white);
+  flex: 1;
+  margin: 0 5px 7px 5px;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 900px) {
+  .menuItem button {
+    font-size: 1.35rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .menuItem button {
+    font-size: 1.2rem;
+  }
+}
