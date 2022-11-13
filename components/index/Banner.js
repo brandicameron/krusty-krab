@@ -3,16 +3,14 @@ import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
-import AddedToCartModal from '../shared/AddedToCartModal';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
 export default function Banner() {
   const { cartItems, setCartItems } = useContext(AppContext);
-  const { handleAddToCart, addedToCart } = useAddToCart(cartItems, setCartItems);
+  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
     <section className={styles.banner} id='skip-target'>
-      {addedToCart && <AddedToCartModal />}
       <div className={styles.content}>
         <h1>
           Home of the original <span className='display-text'>Krabby Patty</span>
