@@ -49,3 +49,9 @@
     }
   }
 }
+
+@media (prefers-reduced-motion) {
+  .hamburgerBtn span {
+    transition: none;
+  }
+}

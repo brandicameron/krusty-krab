@@ -74,6 +74,12 @@
 }
 
 @media (prefers-reduced-motion) {
+  .content {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
+  }
+
   .content img {
     animation: none;
   }
