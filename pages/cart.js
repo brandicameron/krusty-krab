@@ -1,4 +1,5 @@
 import styles from '../styles/cart/Cart.module.css';
+import Head from 'next/head';
 import Link from 'next/link';
 import { useUpdateQuantity } from '../hooks/useUpdateQuantity';
 import { v4 as uuidv4 } from 'uuid';
@@ -8,6 +9,9 @@ export default function Cart() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>The Krusty Krab | Your Cart</title>
+      </Head>
       <section className={styles.cart}>
         <h1 className='display-text'>Cart</h1>
         <ul>
