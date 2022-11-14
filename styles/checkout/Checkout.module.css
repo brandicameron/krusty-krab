@@ -33,3 +33,17 @@
     margin-top: -20vh;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .checkout {
+    font-size: 1.4rem;
+  }
+
+  .checkout h1 {
+    margin-top: -23vh;
+  }
+
+  .checkout a {
+    margin-top: 1.5rem;
+  }
+}
