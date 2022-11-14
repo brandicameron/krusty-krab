@@ -1,0 +1,62 @@
+.successModal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 25px;
+  right: 0;
+  width: 325px;
+  gap: 1rem;
+  height: fit-content;
+  line-height: 1.2;
+  background-color: var(--successColor);
+  padding: 1rem;
+  border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+  filter: drop-shadow(5px 5px 15px rgba(0 0 0 / 30%));
+  z-index: 50;
+  transform: translateX(325px);
+  animation: slide-in 1s linear forwards;
+  animation-delay: 50ms;
+}
+
+@keyframes slide-in {
+  10% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(325px);
+  }
+}
+
+.cart {
+  position: relative;
+}
+
+.cart img {
+  width: 50px;
+}
+
+.addSign {
+  position: absolute;
+  top: 2px;
+  left: 48%;
+  font-size: 1.2rem;
+  transform: translateY(-20px);
+  animation: drop 125ms ease-out forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes drop {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .itemName {
+    max-width: 220px;
+    line-height: 1.2;
+  }
+}
