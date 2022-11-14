@@ -12,7 +12,6 @@
   width: 45px;
   height: 45px;
   left: 10%;
-  transform: translateY(-3664px) translateX(0);
   animation: float 15s linear reverse infinite;
 }
 
@@ -20,7 +19,6 @@
   width: 30px;
   height: 30px;
   left: 25%;
-  transform: translateY(-3664px) translateX(0);
   animation: float 15s linear reverse infinite;
   animation-delay: 200ms;
 }
@@ -29,7 +27,6 @@
   width: 20px;
   height: 20px;
   left: 65%;
-  transform: translateY(-3664px) translateX(0);
   animation: float 30s linear reverse infinite;
   animation-delay: 800ms;
 }
@@ -38,8 +35,7 @@
   position: relative;
   width: 55px;
   height: 55px;
-  left: 85%;
-  transform: translateY(-3664px) translateX(0);
+  left: 85vw;
   animation: float 40s linear reverse infinite;
   animation-delay: 1.5s;
 }
@@ -53,5 +49,11 @@
 @media (prefers-reduced-motion) {
   .bubbles {
     display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bubble4 {
+    left: 50vw;
   }
 }
