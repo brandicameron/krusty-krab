@@ -1,36 +1,32 @@
 .successModal {
   position: fixed;
-  display: grid;
-  place-content: center;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  z-index: 20;
-}
-
-.successModalContent {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
-  text-align: center;
+  top: 25px;
+  right: 0;
+  width: 325px;
+  gap: 1rem;
+  height: fit-content;
   line-height: 1.2;
   background-color: var(--successColor);
-  padding: 2rem;
-  border-radius: 50%;
-  transform: scale(0);
-  opacity: 0;
-  box-shadow: 1.5rem 2.5rem 3rem -3rem rgba(0 0 0 / 30%);
-  animation: grow 75ms linear forwards;
+  padding: 1rem;
+  border-radius: var(--borderRadius) 0 0 var(--borderRadius);
+  filter: drop-shadow(5px 5px 15px rgba(0 0 0 / 30%));
+  z-index: 50;
+  transform: translateX(325px);
+  animation: slide-in 1s linear forwards;
   animation-delay: 50ms;
 }
 
-@keyframes grow {
+@keyframes slide-in {
+  10% {
+    transform: translateX(0);
+  }
+  95% {
+    transform: translateX(0);
+  }
   100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: translateX(325px);
   }
 }
 
@@ -40,7 +36,6 @@
 
 .cart img {
   width: 50px;
-  margin-bottom: 0.5rem;
 }
 
 .addSign {
@@ -48,7 +43,7 @@
   top: 2px;
   left: 48%;
   font-size: 1.2rem;
-  transform: translateY(-30px);
+  transform: translateY(-20px);
   animation: drop 125ms ease-out forwards;
   animation-delay: 200ms;
 }
@@ -61,8 +56,7 @@
 
 @media screen and (max-width: 900px) {
   .itemName {
-    max-width: 200px;
+    max-width: 220px;
     line-height: 1.2;
-    margin: 0 auto;
   }
 }
