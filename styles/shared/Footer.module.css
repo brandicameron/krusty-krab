@@ -9,7 +9,6 @@
   background-image: url('../../public/images/sea-waves.png');
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: contain;
   background-size: cover;
   margin-bottom: auto;
 }
@@ -70,62 +69,6 @@
 .coralOrange {
   bottom: 0;
   right: 0;
-}
-
-.bubbles {
-  /* This prevents the page from scrolling down past the footer when a bubble is being generated */
-  position: fixed;
-  pointer-events: none;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.bubble1 {
-  width: 45px;
-  height: 45px;
-  left: 20%;
-  transform: translateY(-3664px) translateX(0);
-  animation: float 15s linear reverse infinite;
-}
-
-.bubble2 {
-  width: 30px;
-  height: 30px;
-  left: 25%;
-  transform: translateY(-3664px) translateX(0);
-  animation: float 15s linear reverse infinite;
-  animation-delay: 200ms;
-}
-
-.bubble3 {
-  width: 20px;
-  height: 20px;
-  left: 65%;
-  transform: translateY(-3664px) translateX(0);
-  animation: float 30s linear reverse infinite;
-  animation-delay: 800ms;
-}
-
-.bubble4 {
-  width: 55px;
-  height: 55px;
-  left: 90%;
-  transform: translateY(-3664px) translateX(0);
-  animation: float 45s linear reverse infinite;
-  animation-delay: 1.5s;
-}
-
-@keyframes float {
-  100% {
-    transform: translateY(100vh) translateX(0);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .bubbles {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 900px) {

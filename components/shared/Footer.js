@@ -3,7 +3,6 @@ import Image from 'next/image';
 import SeaLeaf from '../../public/images/sea-leaf.png';
 import CoralPurple from '../../public/images/coral-purple.png';
 import CoralOrange from '../../public/images/coral-orange.png';
-import Bubble from '../../public/images/bubble.svg';
 
 export default function Footer() {
   const date = new Date();
@@ -25,12 +24,6 @@ export default function Footer() {
       <Image className={styles.coralPurple} src={CoralPurple} alt='' />
       <Image className={styles.coralOrange} src={CoralOrange} alt='' />
       <Image className={styles.seaLeaf2} src={SeaLeaf} alt='' />
-      <div className={styles.bubbles}>
-        <Image className={styles.bubble1} src={Bubble} alt='' />
-        <Image className={styles.bubble2} src={Bubble} alt='' />
-        <Image className={styles.bubble3} src={Bubble} alt='' />
-        <Image className={styles.bubble4} src={Bubble} alt='' />
-      </div>
     </footer>
   );
 }
