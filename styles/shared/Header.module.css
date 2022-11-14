@@ -1,5 +1,5 @@
 .header {
-  height: 115px;
+  height: 215px;
 }
 
 .skipToContent {
@@ -50,7 +50,7 @@
 }
 
 .navigation li:hover:not(.cartContainer) {
-  color: var(--primaryColor);
+  color: var(--hoverTextColor);
 }
 
 .light {

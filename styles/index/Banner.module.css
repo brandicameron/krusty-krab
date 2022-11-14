@@ -1,7 +1,7 @@
 .banner {
   display: grid;
   place-content: center;
-  height: calc(100vh - 115px);
+  height: calc(100vh - 215px);
 }
 
 .flower1,
@@ -32,6 +32,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  margin-top: -15vh;
   text-align: center;
   grid-template-areas:
     'pattyImg heading'
@@ -86,8 +87,8 @@
 }
 
 @media screen and (pointer: coarse) and (orientation: landscape) {
-  .banner {
-    height: calc(100vh - 145px);
+  .content {
+    margin-top: -20vh;
   }
 }
 
@@ -110,6 +111,7 @@
       'pattyImg'
       'pText'
       'button';
+    margin-top: 0;
     margin-bottom: 5rem;
   }
 

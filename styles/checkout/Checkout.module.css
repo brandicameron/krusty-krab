@@ -1,7 +1,7 @@
 .checkout {
   display: grid;
   place-content: center;
-  height: calc(100vh - 115px);
+  height: calc(100vh - 215px);
   width: min(700px, 90vw);
   margin: 0 auto;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
@@ -17,7 +17,7 @@
 }
 
 .checkout h1 {
-  margin-top: -5vh;
+  margin-top: -15vh;
 }
 
 .checkout h1 span {
@@ -29,8 +29,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .checkout {
-    height: calc(100vh - 350px);
-    max-height: -webkit-fill-available;
+  .checkout h1 {
+    margin-top: -20vh;
   }
 }
