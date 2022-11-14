@@ -60,3 +60,9 @@
     line-height: 1.2;
   }
 }
+
+@media screen and (max-width: 350px) {
+  .successModal {
+    width: 275px;
+  }
+}
