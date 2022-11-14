@@ -1,7 +1,7 @@
 import styles from '../../styles/index/Menu.module.css';
 import { menuItems } from '../../data/menuItems';
+import MenuItem from './MenuItem';
 import { v4 as uuidv4 } from 'uuid';
-import MenuItem from './menuItem';
 
 export default function Menu() {
   return (
