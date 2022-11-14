@@ -40,8 +40,8 @@
     'pattyImg button';
   opacity: 0;
   transform: translateY(1rem);
-  animation: fade-in-up 300ms linear forwards;
-  animation-delay: 500ms;
+  animation: fade-in-up 200ms linear forwards;
+  animation-delay: 300ms;
 }
 
 @keyframes fade-in-up {
