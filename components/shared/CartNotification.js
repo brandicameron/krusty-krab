@@ -1,4 +1,4 @@
-import styles from '../../styles/shared/AddedToCartModal.module.css';
+import styles from '../../styles/shared/CartNotification.module.css';
 import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 
