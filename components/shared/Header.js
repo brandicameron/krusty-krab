@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Light from '../../public/images/light.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import Logo from '../../public/images/krusty-krab-logo.png';
 import HamburgerMenu from './HamburgerMenu';
 import NavLink from './NavLink';
 import CartLink from './CartLink';
@@ -19,13 +20,7 @@ export default function Header() {
           Skip to content
         </a>
         <Link href='/' className={styles.logo}>
-          <Image
-            src='/images/krusty-krab-logo.png'
-            alt='Krusty Krab Logo'
-            width={200}
-            height={160}
-            priority
-          />
+          <Image src={Logo} alt='Krusty Krab Logo' priority />
         </Link>
         <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <ul className={menuOpen ? styles.slideIn : ''}>
