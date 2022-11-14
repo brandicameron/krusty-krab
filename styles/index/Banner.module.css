@@ -81,11 +81,7 @@
 
 @media screen and (pointer: coarse) and (orientation: landscape) {
   .banner {
-    height: calc(100vh - 149px);
-  }
-
-  .header nav li:not(.cartContainer) {
-    display: none;
+    height: calc(100vh - 145px);
   }
 }
 
