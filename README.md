@@ -4,9 +4,11 @@
 
 ![App Screenshot](/public/share.jpg)
 
-2nd in a series of parody websites based on businesses featured in movies or shows.
+## Second in a series of parody websites based on businesses featured in movies or shows.
 
-Check out the _Men in Black_ agent portal website here!
+&nbsp;<br>
+
+Check out the first project, a _Men in Black_ agent portal website here:
 
 [https://mib-brandicameron.vercel.app/](https://mib-brandicameron.vercel.app/)
 
@@ -20,9 +22,15 @@ Check out the _Men in Black_ agent portal website here!
 
 &nbsp;<br>
 
-- Used "grid-template-areas" for the first time — so cool & powerful!!
-- Learned about "e.currentTarget", which was fixed a bug where the "Coral Bits" cart button was returning a data attribute value of "null"
-- I was unaware that p and header tags are not allowed inside a button. 🤨
+- Used "grid-template-areas" for the first time — so cool & powerful!! Used to easily change the order of the banner items between desktop and mobile layouts.
+- First time creating a working shopping cart with add to cart buttons and ability to adjust quantities in the cart.
+- First time to implement a "notification" that pops out when an item is added to the cart.
+- Learned about "e.currentTarget", which fixed a bug where the "Coral Bits" cart button was returning a data attribute value of "null".
+- It was fun getting the random bubbles to float up the entire page with vanilla css.
+- More practice using Context. (used for shopping cart state)
+- More practice creating a mobile menu (including animated hamburger menu that flys out)
+- Learned that a p tag is not allowed inside a button. 🤨
+- Been playing around with how I like to organize files in a Next project using css modules — this time I housed all the css files within the styles folder that is already present in a next project. On the [Men in Black Agent Portal project](https://github.com/brandicameron/MIB) I kept the css modules next to each component, which I think I like better.
 
   &nbsp;<br>
 
