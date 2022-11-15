@@ -24,6 +24,7 @@ export default function Header() {
         </Link>
         <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <ul className={menuOpen ? styles.slideIn : ''}>
+          <NavLink link='/' title='Home' setMenuOpen={setMenuOpen} />
           <NavLink link='/#menu' title='Menu' setMenuOpen={setMenuOpen} />
           <NavLink link='/#location' title='Location' setMenuOpen={setMenuOpen} />
           <NavLink link='/team' title='Our Team' setMenuOpen={setMenuOpen} />

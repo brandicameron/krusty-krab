@@ -49,6 +49,10 @@
   font-size: clamp(1.5rem, 4vw, 1.5rem);
 }
 
+.navigation li:first-child {
+  display: none;
+}
+
 .navigation li:hover:not(.cartContainer) {
   color: var(--hoverTextColor);
 }
@@ -114,6 +118,10 @@
     font-size: 1.75rem;
     border-radius: 0 0 0 var(--borderRadius);
     transform: translateX(100vw);
+  }
+
+  .navigation li:first-child {
+    display: block;
   }
 
   .slideIn {
