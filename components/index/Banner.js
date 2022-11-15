@@ -19,11 +19,9 @@ export default function Banner() {
       <Image className={styles.flower3} src={Flower3} alt='' />
       <div className={styles.content}>
         <h1>
-          Home of the original <span className='display-text'>Krabby Patty</span>
+          Home of the world famous <span className='display-text'>Krabby Patty</span>
         </h1>
-        <p>
-          The world famous secret formula Krabby Patty — you&apos;ll fall in love at first bite.
-        </p>
+        <p>Try our secret formula Krabby Patty — you&apos;ll fall in love at first bite.</p>
         <button className='primary-button' onClick={handleAddToCart} data-value='Krabby Patty'>
           Add to cart
         </button>
