@@ -96,7 +96,7 @@
 
   .logo {
     width: 150px;
-    top: 15px;
+    top: 20px;
   }
 
   .navigation {
@@ -156,7 +156,7 @@
   .light {
     width: 300px;
     height: 300px;
-    margin-top: -335px;
+    margin-top: -175px;
     animation: none;
   }
 }
