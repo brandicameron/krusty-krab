@@ -7,6 +7,7 @@
   --highlightColor: #ffea00;
   --focusColor: #6707ed;
   --successColor: #2ab81b;
+  --successColorTransparent: rgb(42, 184, 27, 90%);
   --white: #fff;
   --gradient: linear-gradient(to top, #015eea, #00c0fa);
   --borderRadius: 20px;
@@ -54,7 +55,6 @@ button {
   border: none;
   cursor: pointer;
   background-color: transparent;
-  /* font-family: var(--displayFont); */
 }
 
 button:focus-visible,

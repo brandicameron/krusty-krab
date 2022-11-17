@@ -1,20 +1,14 @@
 .successModal {
   position: fixed;
-  display: flex;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
   top: 25px;
   right: 0;
-  width: 325px;
-  gap: 1rem;
-  height: fit-content;
-  line-height: 1.2;
-  background-color: var(--successColor);
-  padding: 1rem;
-  border-radius: var(--borderRadius) 0 0 var(--borderRadius);
-  filter: drop-shadow(5px 5px 15px rgba(0 0 0 / 30%));
-  z-index: 50;
-  transform: translateX(325px);
-  animation: slide-in 1s linear forwards;
+  z-index: 100;
+  filter: drop-shadow(30px 15px 15px rgba(0 0 0 / 30%));
+  transform: translateX(400px);
+  animation: slide-in 2s linear forwards;
   animation-delay: 50ms;
 }
 
@@ -22,47 +16,68 @@
   10% {
     transform: translateX(0);
   }
-  95% {
+  85% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(325px);
+    transform: translateX(400px);
   }
 }
 
-.cart {
+.successModal > * {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.bubble {
   position: relative;
+  right: 120px;
+  top: 3%;
+  width: min(250px, 70vw);
+  height: fit-content;
 }
 
-.cart img {
-  width: 50px;
-}
-
-.addSign {
+.bubbleTail {
   position: absolute;
-  top: 2px;
-  left: 48%;
-  font-size: 1.2rem;
-  transform: translateY(-20px);
-  animation: drop 125ms ease-out forwards;
-  animation-delay: 200ms;
+  top: 85%;
+  transform: translateY(-85%);
+  right: -34.5px;
+  z-index: 3;
 }
 
-@keyframes drop {
-  100% {
-    transform: translateY(0);
-  }
+.successModal p {
+  line-height: 1.2;
+  background-color: var(--successColorTransparent);
+  padding: 1rem;
+  border: 5px solid var(--white);
+  border-radius: var(--borderRadius);
+  min-height: 85px;
+  text-align: center;
+  z-index: 2;
 }
 
 @media screen and (max-width: 900px) {
-  .itemName {
-    max-width: 220px;
-    line-height: 1.2;
+  .successModal {
+    right: -25px;
+  }
+  .spongeBob {
+    width: 200px;
+    height: auto;
+  }
+
+  .bubble {
+    top: 15px;
+    top: 4%;
   }
 }
 
 @media screen and (max-width: 350px) {
   .successModal {
-    width: 275px;
+    right: -33px;
+  }
+
+  .spongeBob {
+    width: 160px;
+    height: auto;
   }
 }
