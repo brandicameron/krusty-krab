@@ -90,3 +90,9 @@
     object-position: bottom;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .footer h2 {
+    font-size: 3.75rem;
+  }
+}
