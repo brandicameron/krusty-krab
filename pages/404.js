@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function FourOhFour() {
   return (
     <section className={styles.container}>
-      <h1>You've floated off course!</h1>
+      <h1>You&apos;ve floated off course!</h1>
       <Link className='primary-button' href='/'>
         Go Home
       </Link>
