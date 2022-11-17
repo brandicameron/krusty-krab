@@ -3,11 +3,14 @@ import { menuItems } from '../../data/menuItems';
 import MenuItem from './MenuItem';
 import { v4 as uuidv4 } from 'uuid';
 import { motion } from 'framer-motion';
+import { useReducedMotion } from 'framer-motion';
 
 export default function Menu() {
+  const shouldReduceMotion = useReducedMotion();
+
   const raiseIntoView = {
     initial: {
-      y: '30px',
+      y: shouldReduceMotion ? '0px' : '30px',
       opacity: 0,
     },
     whileInView: {

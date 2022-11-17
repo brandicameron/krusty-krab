@@ -88,9 +88,9 @@
 
 @media (prefers-reduced-motion) {
   .content {
-    opacity: 1;
     transform: translateY(0);
-    animation: none;
+    animation: fade-in-up 200ms linear forwards;
+    animation-delay: 100ms;
   }
 
   .krabbyPattyImg {

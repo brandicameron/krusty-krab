@@ -6,16 +6,18 @@ import CoralBits from '../../public/images/coral-bits.png';
 import AddtoCartIcon from '../../public/images/cart-add.svg';
 import { useAddToCart } from '../../hooks/useAddToCart';
 import { motion } from 'framer-motion';
+import { useReducedMotion } from 'framer-motion';
 
 export default function CallToAction() {
   const { cartItems, setCartItems } = useContext(AppContext);
   const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <>
       <article className={styles.callToAction}>
         <motion.div
-          initial={{ x: '-175px' }}
+          initial={{ x: shouldReduceMotion ? '0px' : '-175px' }}
           whileInView={{ x: '0px' }}
           transition={{ duration: 0.3 }}
           viewport={{ amount: 0.3, once: true }}

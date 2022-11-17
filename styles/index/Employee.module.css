@@ -123,6 +123,7 @@
     width: 200px;
     object-fit: contain;
     clip-path: circle(35%);
+    margin-top: -2.5rem;
   }
 
   .leftBurst {
@@ -135,7 +136,7 @@
 
   .leftBurst,
   .rightBurst {
-    top: 25%;
+    top: 15%;
     height: 175px;
     width: 75px;
   }

@@ -73,12 +73,6 @@
   }
 }
 
-@media (prefers-reduced-motion) {
-  .light {
-    animation: none;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .navigation {
     padding-right: 5.75rem;
@@ -165,5 +159,15 @@
     height: 300px;
     margin-top: -175px;
     animation: none;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .light {
+    animation: none;
+  }
+
+  .slideIn {
+    animation: slide-in 0ms ease-out forwards;
   }
 }

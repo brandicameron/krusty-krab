@@ -38,6 +38,15 @@
   border-radius: 2rem;
 }
 
+@media (prefers-reduced-motion) {
+  .teamContainer {
+    opacity: 0;
+    transform: translateY(0);
+    animation: fade-in-up 200ms linear forwards;
+    animation-delay: 100ms;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .teamContainer h1 {
     margin-bottom: 2rem;
