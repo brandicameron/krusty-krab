@@ -21,11 +21,12 @@ export default function CartLink() {
 
   return (
     <div className={styles.cartContainer}>
-      <Link href='cart'>
-        <img src='./images/cart.svg' alt='Shopping Cart' />
+      <Link href='cart' aria-label={`Shopping Card: ${numItemsInCart} items.`}>
+        <img src='./images/cart.svg' alt='' />
         <small
           className={styles.numItemsInCart}
           style={{ transform: newItemAdded ? 'scale(1.2)' : 'scale(1)' }}
+          aria-hidden='true'
         >
           {numItemsInCart}
         </small>

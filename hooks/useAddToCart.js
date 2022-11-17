@@ -8,7 +8,7 @@ export function useAddToCart(state, setState) {
     if (addedToCart) {
       let timer = setTimeout(() => {
         setAddedToCart(false);
-      }, 1000);
+      }, 1800);
 
       return () => {
         clearTimeout(timer);

@@ -31,11 +31,19 @@ export default function Cart() {
               <div>
                 <h2>{item.name}</h2>
                 <div className={styles.quantity}>
-                  <button onClick={handleUpdateQuantity} data-name={item.name}>
+                  <button
+                    onClick={handleUpdateQuantity}
+                    data-name={item.name}
+                    aria-label={`Remove one ${item.name} from the cart.`}
+                  >
                     -
                   </button>
                   <p>{item.quantity}</p>
-                  <button onClick={handleUpdateQuantity} data-name={item.name}>
+                  <button
+                    onClick={handleUpdateQuantity}
+                    data-name={item.name}
+                    aria-label={`Add one ${item.name} to the cart.`}
+                  >
                     +
                   </button>
                 </div>

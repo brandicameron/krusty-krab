@@ -7,7 +7,7 @@ import BubbleTail from '../../public/images/tail.svg';
 
 export default function AddedToCartModal() {
   const [numItems, setNumItems] = useState(0);
-  const { itemName, cartItems } = useContext(AppContext);
+  const { itemName, cartItems, addedToCart } = useContext(AppContext);
 
   useEffect(() => {
     setNumItems(cartItems.get(itemName));
@@ -41,9 +41,18 @@ export default function AddedToCartModal() {
 
   return (
     <>
-      <section className={styles.successModal}>
+      <section
+        className={styles.successModal}
+        aria-live='polite'
+        aria-label={
+          addedToCart
+            ? `${numItems} ${handleEndsWithY()}
+            ${handlePlural()} in your cart!`
+            : ''
+        }
+      >
         <Image priority='true' className={styles.spongeBob} src={SpongeBob} alt='' />
-        <div className={styles.bubble}>
+        <div className={styles.bubble} aria-hidden='true'>
           <Image className={styles.bubbleTail} src={BubbleTail} alt='' />
           <p className={styles.itemName}>
             {numItems} {handleEndsWithY()}

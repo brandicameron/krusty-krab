@@ -11,14 +11,15 @@ export default function MenuItem({ item }) {
   return (
     <li className={styles.menuItem}>
       <button
-        name={`Add ${item.name} to cart`}
+        // name={`Add ${item.name} to cart`}
         data-value={item.name}
         onClick={handleAddToCart}
-        title={`Add ${item.name} to cart.`}
+        // title={`Add ${item.name} to cart.`}
+        aria-label={`Add ${item.name} to cart for ${item.price} dollars.`}
       >
-        <span>{item.name}</span>
-        <motion.span className={styles.dotLeaders}></motion.span>
-        <span>{item.price}</span>
+        <span aria-hidden='true'>{item.name}</span>
+        <motion.span className={styles.dotLeaders} aria-hidden='true'></motion.span>
+        <span aria-hidden='true'>{item.price}</span>
       </button>
     </li>
   );

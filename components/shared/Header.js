@@ -23,7 +23,7 @@ export default function Header() {
           <Image src={Logo} alt='Krusty Krab Logo' priority />
         </Link>
         <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <ul className={menuOpen ? styles.slideIn : ''}>
+        <ul className={menuOpen ? styles.slideIn : ''} aria-hidden={menuOpen ? 'false' : 'true'}>
           <NavLink link='/' title='Home' setMenuOpen={setMenuOpen} />
           <NavLink link='/#menu' title='Menu' setMenuOpen={setMenuOpen} />
           <NavLink link='/#location' title='Location' setMenuOpen={setMenuOpen} />

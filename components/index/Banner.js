@@ -22,7 +22,12 @@ export default function Banner() {
           Home of the world famous <span className='display-text'>Krabby Patty</span>
         </h1>
         <p>Try our secret formula Krabby Patty — you&apos;ll fall in love at first bite.</p>
-        <button className='primary-button' onClick={handleAddToCart} data-value='Krabby Patty'>
+        <button
+          className='primary-button'
+          onClick={handleAddToCart}
+          data-value='Krabby Patty'
+          aria-label='Add a Krabby Patty to the cart.'
+        >
           Add to cart
         </button>
         <Image src={KrabbyPatty} alt='The World Famous Krabby Patty' priority />

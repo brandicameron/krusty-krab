@@ -23,7 +23,12 @@ export default function CallToAction() {
           <Image src={CoralBits} alt="Don't forget a side of Coral Bits!" />
         </motion.div>
         <h2>Don&apos;t forget a side of Coral Bits!</h2>
-        <button onClick={handleAddToCart} data-value='Coral Bits' className='primary-button-sq'>
+        <button
+          onClick={handleAddToCart}
+          data-value='Coral Bits'
+          className='primary-button-sq'
+          aria-label='Add Coral Bits to the cart.'
+        >
           <Image src={AddtoCartIcon} alt='Add to Cart' />
         </button>
       </article>

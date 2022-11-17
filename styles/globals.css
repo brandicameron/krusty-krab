@@ -144,11 +144,18 @@ li {
   margin-top: 2rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .primary-button-sq {
     width: 65px;
     height: 65px;
     padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .primary-button-sq {
+    width: 65px;
+    height: 65px;
   }
 
   .primary-button-sq img {

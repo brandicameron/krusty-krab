@@ -8,7 +8,7 @@
   z-index: 100;
   filter: drop-shadow(30px 15px 15px rgba(0 0 0 / 30%));
   transform: translateX(400px);
-  animation: slide-in 2s linear forwards;
+  animation: slide-in 1.25s linear forwards;
   animation-delay: 50ms;
 }
 

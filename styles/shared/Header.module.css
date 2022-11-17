@@ -119,6 +119,11 @@
     font-size: 1.75rem;
     border-radius: 0 0 0 var(--borderRadius);
     transform: translateX(100vw);
+    visibility: hidden;
+  }
+
+  .navigation ul.slideIn {
+    visibility: visible;
   }
 
   .navigation li:first-child,
