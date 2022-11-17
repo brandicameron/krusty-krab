@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import CoralBits from '../../public/images/coral-bits.png';
+import AddtoCartIcon from '../../public/images/cart-add.svg';
 import { useAddToCart } from '../../hooks/useAddToCart';
 import { motion } from 'framer-motion';
 
@@ -23,7 +24,7 @@ export default function CallToAction() {
         </motion.div>
         <h2>Don&apos;t forget a side of Coral Bits!</h2>
         <button onClick={handleAddToCart} data-value='Coral Bits' className='primary-button-sq'>
-          <img height='25' width='25' src='./images/cart-add.svg' alt='Add to Cart' />
+          <Image src={AddtoCartIcon} alt='Add to Cart' />
         </button>
       </article>
     </>
