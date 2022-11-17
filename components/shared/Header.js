@@ -28,6 +28,7 @@ export default function Header() {
           <NavLink link='/#menu' title='Menu' setMenuOpen={setMenuOpen} />
           <NavLink link='/#location' title='Location' setMenuOpen={setMenuOpen} />
           <NavLink link='/team' title='Our Team' setMenuOpen={setMenuOpen} />
+          <NavLink link='/cart' title='Cart' setMenuOpen={setMenuOpen} />
         </ul>
       </nav>
       <CartLink />
