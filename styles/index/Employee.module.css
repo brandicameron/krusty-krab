@@ -4,18 +4,17 @@
   place-content: center;
   gap: 0.75rem;
   width: 100%;
-  height: 850px;
+  height: 825px;
   margin-top: 175px;
+  margin-bottom: 5rem;
   background-color: var(--primaryColor);
 }
 
 .shape {
   position: absolute;
   top: -150px;
-  left: 0;
   width: 100%;
   overflow: hidden;
-  line-height: 0;
   transform: scaleY(-1);
 }
 
@@ -27,6 +26,15 @@
 }
 
 .shape .shapeFill {
+  fill: var(--primaryColor);
+}
+
+.shapeBottom {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: -10vw;
+  overflow: hidden;
   fill: var(--primaryColor);
 }
 
@@ -108,11 +116,16 @@
   .employeeContainer {
     height: 600px;
     margin-top: 125px;
+    margin-bottom: 2rem;
   }
 
   .shape svg {
     transform: scaleY(0.4) scaleX(1.1);
     height: 215px;
+  }
+
+  .shapeBottom {
+    bottom: -11vw;
   }
 
   .employeeContainer h1 {
