@@ -2,6 +2,7 @@ import styles from '../../styles/index/MenuItem.module.css';
 import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import { useAddToCart } from '../../hooks/useAddToCart';
+import { motion } from 'framer-motion';
 
 export default function MenuItem({ item }) {
   const { cartItems, setCartItems } = useContext(AppContext);
@@ -16,7 +17,7 @@ export default function MenuItem({ item }) {
         title={`Add ${item.name} to cart.`}
       >
         <span>{item.name}</span>
-        <span className={styles.dotLeaders}></span>
+        <motion.span className={styles.dotLeaders}></motion.span>
         <span>{item.price}</span>
       </button>
     </li>
