@@ -3,6 +3,8 @@ import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
+import HeadingExpanded from '../../public/images/heading-expanded.svg';
+import HeadingCompact from '../../public/images/heading-compact.svg';
 import Flower1 from '../../public/images/flower-1.svg';
 import Flower2 from '../../public/images/flower-2.svg';
 import Flower3 from '../../public/images/flower-3.svg';
@@ -19,7 +21,8 @@ export default function Banner() {
       <Image className={styles.flower3} src={Flower3} alt='' />
       <div className={styles.content}>
         <h1>
-          Home of the world famous <span className='display-text'>Krabby Patty</span>
+          Home of the world famous{' '}
+          <span className={styles.headingText} aria-label='Krabby Patty'></span>
         </h1>
         <p>Try our secret formula Krabby Patty — you&apos;ll fall in love at first bite.</p>
         <button
@@ -30,7 +33,12 @@ export default function Banner() {
         >
           Add to cart
         </button>
-        <Image src={KrabbyPatty} alt='The World Famous Krabby Patty' priority />
+        <Image
+          className={styles.krabbyPattyImg}
+          src={KrabbyPatty}
+          alt='The World Famous Krabby Patty'
+          priority
+        />
       </div>
     </section>
   );

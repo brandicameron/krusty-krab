@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-top: -15vh;
+  margin: -15vh auto 0 auto;
   text-align: center;
   grid-template-areas:
     'pattyImg heading'
@@ -55,13 +55,24 @@
   grid-area: heading;
 }
 
+.headingText {
+  display: block;
+  background-image: url('../../public/images/heading-expanded.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: min(600px, 80vw);
+  height: min(150px, 12vh);
+  margin: 1rem auto -1rem auto;
+}
+
 .content p {
   grid-area: pText;
   max-width: 450px;
   margin: 0 auto;
 }
 
-.content img {
+.krabbyPattyImg {
   grid-area: pattyImg;
   animation: float 7s ease-in-out infinite;
 }
@@ -82,7 +93,7 @@
     animation: none;
   }
 
-  .content img {
+  .krabbyPattyImg {
     animation: none;
   }
 }
@@ -90,6 +101,16 @@
 @media screen and (pointer: coarse) and (orientation: landscape) {
   .content {
     margin-top: -20vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .headingText {
+    background-image: url('../../public/images/heading-compact.svg');
+    background-size: contain;
+    width: auto;
+    height: min(225px, 30vh);
+    margin: 1rem auto -1rem auto;
   }
 }
 
@@ -125,7 +146,7 @@
     max-width: 30ch;
   }
 
-  .content img {
+  .krabbyPattyImg {
     width: 275px;
     height: fit-content;
     object-fit: contain;
