@@ -3,8 +3,6 @@ import { useContext } from 'react';
 import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
-import HeadingExpanded from '../../public/images/heading-expanded.svg';
-import HeadingCompact from '../../public/images/heading-compact.svg';
 import Flower1 from '../../public/images/flower-1.svg';
 import Flower2 from '../../public/images/flower-2.svg';
 import Flower3 from '../../public/images/flower-3.svg';
