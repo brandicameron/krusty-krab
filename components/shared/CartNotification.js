@@ -42,7 +42,7 @@ export default function AddedToCartModal() {
   return (
     <>
       <section className={styles.successModal}>
-        <Image className={styles.spongeBob} src={SpongeBob} alt='' />
+        <Image priority='true' className={styles.spongeBob} src={SpongeBob} alt='' />
         <div className={styles.bubble}>
           <Image className={styles.bubbleTail} src={BubbleTail} alt='' />
           <p className={styles.itemName}>
