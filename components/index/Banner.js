@@ -21,7 +21,7 @@ export default function Banner() {
         <h1>
           Home of the world famous{' '}
           <span className={styles.headingText}>
-            <span className='screen-reader-only'>Krabby Patty</span>
+            <span className='sr-only'>Krabby Patty</span>
           </span>
         </h1>
         <p>Try our secret formula Krabby Patty — you&apos;ll fall in love at first bite.</p>
