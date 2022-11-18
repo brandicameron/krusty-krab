@@ -1,11 +1,11 @@
-import styles from '../../styles/shared/CartNotification.module.css';
+import styles from '../../styles/shared/Notification.module.css';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import SpongeBob from '../../public/images/sb.png';
 import BubbleTail from '../../public/images/tail.svg';
 
-export default function AddedToCartModal() {
+export default function Notification() {
   const [numItems, setNumItems] = useState(0);
   const { itemName, cartItems, addedToCart } = useContext(AppContext);
 

@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { AppContext } from '../AppContext';
 import Footer from './shared/Footer';
 import Header from './shared/Header';
-import CartNotification from './shared/CartNotification';
+import Notification from './shared/Notification';
 import Bubbles from './shared/Bubbles';
 
 export default function Layout({ children }) {
@@ -10,7 +10,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Bubbles />
-      {addedToCart && <CartNotification />}
+      {addedToCart && <Notification />}
       <Header />
       <main>{children}</main>
       <Footer />
