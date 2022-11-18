@@ -16,23 +16,11 @@ export default function AddedToCartModal() {
   const handlePlural = () => {
     if (numItems > 1) {
       if (itemName.at(-1) === 's') {
-        return;
-      } else if (itemName.at(-1) === 'y') {
-        return 'ies';
-      } else {
-        return 's';
-      }
-    } else {
-      return;
-    }
-  };
-
-  const handleEndsWithY = () => {
-    if (numItems > 1) {
-      if (itemName.at(-1) === 'y') {
-        return itemName.slice(0, -1).trim();
-      } else {
         return itemName;
+      } else if (itemName.at(-1) === 'y') {
+        return itemName.slice(0, -1).trim() + 'ies';
+      } else {
+        return itemName + 's';
       }
     } else {
       return itemName;
@@ -43,10 +31,10 @@ export default function AddedToCartModal() {
     <>
       <section
         className={styles.successModal}
-        aria-live='polite'
+        aria-live='assertive'
         aria-label={
           addedToCart
-            ? `${numItems} ${handleEndsWithY()}
+            ? `${numItems} {''}
             ${handlePlural()} in your cart!`
             : ''
         }
@@ -55,7 +43,7 @@ export default function AddedToCartModal() {
         <div className={styles.bubble} aria-hidden='true'>
           <Image className={styles.bubbleTail} src={BubbleTail} alt='' />
           <p className={styles.itemName}>
-            {numItems} {handleEndsWithY()}
+            {numItems} {''}
             {handlePlural()} in your cart!
           </p>
         </div>

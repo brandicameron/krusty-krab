@@ -11,10 +11,8 @@ export default function MenuItem({ item }) {
   return (
     <li className={styles.menuItem}>
       <button
-        // name={`Add ${item.name} to cart`}
         data-value={item.name}
         onClick={handleAddToCart}
-        // title={`Add ${item.name} to cart.`}
         aria-label={`Add ${item.name} to cart for ${item.price} dollars.`}
       >
         <span aria-hidden='true'>{item.name}</span>

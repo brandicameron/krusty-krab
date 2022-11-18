@@ -18,6 +18,12 @@ export default function Banner() {
       <Image className={styles.flower2} src={Flower2} alt='' />
       <Image className={styles.flower3} src={Flower3} alt='' />
       <div className={styles.content}>
+        <Image
+          className={styles.krabbyPattyImg}
+          src={KrabbyPatty}
+          alt='The World Famous Krabby Patty'
+          priority
+        />
         <h1>
           Home of the world famous{' '}
           <span className={styles.headingText}>
@@ -33,12 +39,6 @@ export default function Banner() {
         >
           Add to cart
         </button>
-        <Image
-          className={styles.krabbyPattyImg}
-          src={KrabbyPatty}
-          alt='The World Famous Krabby Patty'
-          priority
-        />
       </div>
     </section>
   );
