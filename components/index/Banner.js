@@ -22,7 +22,7 @@ export default function Banner() {
           className={styles.krabbyPattyImg}
           src={KrabbyPatty}
           alt='The World Famous Krabby Patty'
-          priority
+          priority={true}
         />
         <h1>
           Home of the world famous{' '}

@@ -20,7 +20,7 @@ export default function Header() {
           Skip to content
         </a>
         <Link href='/' className={styles.logo}>
-          <Image src={Logo} alt='Krusty Krab Logo' priority />
+          <Image src={Logo} alt='Krusty Krab Logo' priority={true} />
         </Link>
         <HamburgerMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <ul className={menuOpen ? styles.slideIn : ''}>
