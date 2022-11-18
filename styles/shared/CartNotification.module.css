@@ -1,4 +1,4 @@
-.successModal {
+.notification {
   position: fixed;
   display: grid;
   place-content: center;
@@ -24,7 +24,7 @@
   }
 }
 
-.successModal > * {
+.notification > * {
   grid-column: 1/2;
   grid-row: 1/2;
 }
@@ -45,7 +45,7 @@
   z-index: 3;
 }
 
-.successModal p {
+.notification p {
   line-height: 1.2;
   background-color: var(--successColorTransparent);
   padding: 1rem;
@@ -57,7 +57,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .successModal {
+  .notification {
     right: -25px;
   }
   .spongeBob {
@@ -72,7 +72,7 @@
 }
 
 @media screen and (max-width: 350px) {
-  .successModal {
+  .notification {
     right: -33px;
   }
 

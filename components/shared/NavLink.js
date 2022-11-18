@@ -5,10 +5,9 @@ export default function NavLink({ link, title, setMenuOpen }) {
     setMenuOpen(false);
   };
 
-  /* Adding scroll={false} on Links makes smooth scrolling work again */
-
   return (
     <li onClick={handleCloseMenu}>
+      {/* Adding scroll={false} on Links makes smooth scrolling work again */}
       <Link href={link} scroll={false}>
         {title}
       </Link>

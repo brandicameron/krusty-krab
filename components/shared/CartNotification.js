@@ -30,7 +30,7 @@ export default function AddedToCartModal() {
   return (
     <>
       <section
-        className={styles.successModal}
+        className={styles.notification}
         aria-live='assertive'
         aria-label={
           addedToCart

@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css';
 import Head from 'next/head';
 import Banner from '../components/index/Banner';
 import CallToAction from '../components/index/CallToAction';
@@ -7,7 +6,7 @@ import Employee from '../components/index/Employee';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>The Krusty Krab | Come Spend Your Money Here!</title>
         <meta
@@ -26,6 +25,6 @@ export default function Home() {
       <CallToAction />
       <Menu />
       <Employee />
-    </div>
+    </>
   );
 }
