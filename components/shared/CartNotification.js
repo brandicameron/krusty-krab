@@ -13,7 +13,7 @@ export default function AddedToCartModal() {
     setNumItems(cartItems.get(itemName));
   }, []);
 
-  const handlePlural = () => {
+  const itemNameHandlePlural = () => {
     if (numItems > 1) {
       if (itemName.at(-1) === 's') {
         return itemName;
@@ -35,7 +35,7 @@ export default function AddedToCartModal() {
         aria-label={
           addedToCart
             ? `${numItems} {''}
-            ${handlePlural()} in your cart!`
+            ${itemNameHandlePlural()} in your cart!`
             : ''
         }
       >
@@ -44,7 +44,7 @@ export default function AddedToCartModal() {
           <Image className={styles.bubbleTail} src={BubbleTail} alt='' />
           <p className={styles.itemName}>
             {numItems} {''}
-            {handlePlural()} in your cart!
+            {itemNameHandlePlural()} in your cart!
           </p>
         </div>
       </section>
