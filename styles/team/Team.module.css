@@ -27,15 +27,37 @@
   margin: 0 auto;
 }
 
+.team figure {
+  position: relative;
+  transition: 125ms ease-out;
+}
+
+.team figure q {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to top, rgb(30, 30, 30, 70%) 40%, transparent);
+  padding: 3rem 0.5rem 1rem 0.5rem;
+  min-height: 80px;
+  width: 91%;
+  bottom: 14%;
+  line-height: 1.3;
+}
+
+.team figure:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(5px 5px 15px rgba(0 0 0 / 30%));
+}
+
+.team figure:hover q {
+  display: block;
+}
+
 .team img {
   width: 250px;
   height: auto;
   border: 10px solid var(--white);
-  transition: 150ms linear;
-}
-
-.team img:hover {
-  border-radius: 2rem;
 }
 
 @media (prefers-reduced-motion) {
