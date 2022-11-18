@@ -36,7 +36,7 @@ export default function Team() {
           <figcaption>SpongeBob SquarePants, Fry Cook</figcaption>
         </figure>
         <figure>
-          <q>Please come again when I'm not working.</q>
+          <q>Please come again when I&apos;m not working.</q>
           <Image src={Squidward} alt='' />
           <figcaption>Squidward Q. Tentacles, Cashier</figcaption>
         </figure>
