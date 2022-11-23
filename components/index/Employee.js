@@ -9,23 +9,24 @@ export default function Employee() {
 
   return (
     <section className={styles.employeeContainer}>
-      <div className={styles.shape}>
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
-          <motion.path
-            d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-            className={styles.shapeFill}
-            initial={{
-              d: 'M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z',
-            }}
-            animate={{
-              d: shouldReduceMotion
-                ? 'M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-                : 'M321.39,76.44c58-10.79,154.16-30.13,200-41.86,82.39-16.72,168.19-15.13,245.00-.39C820.98,45,855.67,50,959.66,75.83c80.05,18.48,200.53,15.09,240.34,3V0H0V57.35A600.21,500.21,0,0,0,321.39,76.44Z',
-            }}
-            transition={{ repeat: Infinity, repeatType: 'reverse', duration: 3 }}
-          ></motion.path>
-        </svg>
-      </div>
+      <svg
+        className={styles.wavesTop}
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 24 150 28'
+        preserveAspectRatio='none'
+        shapeRendering='auto'
+      >
+        <defs>
+          <path
+            id='gentle-wave'
+            d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z'
+          />
+        </defs>
+        <g className={styles.floatTop}>
+          <use xlinkHref='#gentle-wave' x='48' y='0' fill='rgba(183,2,2,1)' />
+        </g>
+      </svg>
+
       <h1 className='display-text'>Employee of the Month</h1>
       <figure>
         <motion.div
@@ -68,23 +69,23 @@ export default function Employee() {
 
         <figcaption>SpongeBob SquarePants</figcaption>
       </figure>
-      <div className={styles.shapeBottom}>
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'>
-          <motion.path
-            d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-            className={styles.shapeFill}
-            initial={{
-              d: 'M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z',
-            }}
-            animate={{
-              d: shouldReduceMotion
-                ? 'M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-                : 'M321.39,76.44c58-10.79,154.16-30.13,200-41.86,82.39-16.72,168.19-15.13,245.00-.39C820.98,45,855.67,50,959.66,75.83c80.05,18.48,200.53,15.09,240.34,3V0H0V57.35A600.21,500.21,0,0,0,321.39,76.44Z',
-            }}
-            transition={{ repeat: Infinity, repeatType: 'reverse', duration: 3 }}
-          ></motion.path>
-        </svg>
-      </div>
+      <svg
+        className={styles.wavesBottom}
+        xmlns='http://www.w3.org/2000/svg'
+        viewBox='0 24 150 28'
+        preserveAspectRatio='none'
+        shapeRendering='auto'
+      >
+        <defs>
+          <path
+            id='gentle-wave'
+            d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z'
+          />
+        </defs>
+        <g className={styles.floatBottom}>
+          <use xlinkHref='#gentle-wave' x='48' y='0' fill='rgba(183,2,2,1)' />
+        </g>
+      </svg>
     </section>
   );
 }
