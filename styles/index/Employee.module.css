@@ -4,38 +4,52 @@
   place-content: center;
   gap: 0.75rem;
   width: 100%;
-  height: 825px;
-  margin-top: 175px;
-  margin-bottom: 5rem;
+  height: 700px;
+  margin-top: 225px;
+  margin-bottom: 8rem;
   background-color: var(--primaryColor);
 }
 
-.shape {
+.wavesTop {
   position: absolute;
   top: -150px;
-  width: 100%;
-  overflow: hidden;
+  left: 0;
+  width: 100vw;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.wavesBottom {
+  position: absolute;
+  bottom: -150px;
+  left: 0;
+  width: 100vw;
+  min-height: 100px;
+  max-height: 150px;
   transform: scaleY(-1);
 }
 
-.shape svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 150px;
+.floatTop > use,
+.floatBottom > use {
+  animation: move-forever cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation-duration: 30s;
 }
 
-.shape .shapeFill {
-  fill: var(--primaryColor);
+.floatTop > use {
+  animation-delay: -2s;
 }
 
-.shapeBottom {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  bottom: -10vw;
-  overflow: hidden;
-  fill: var(--primaryColor);
+.floatBottom > use {
+  animation-delay: -7s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }
 
 .employeeContainer h1 {
@@ -112,6 +126,13 @@
   transform: rotate(20deg);
 }
 
+@media (prefers-reduced-motion) {
+  .floatTop > use,
+  .floatBottom > use {
+    animation: none;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .employeeContainer {
     height: 600px;
@@ -119,13 +140,21 @@
     margin-bottom: 2rem;
   }
 
-  .shape svg {
-    transform: scaleY(0.4) scaleX(1.1);
-    height: 215px;
+  .floatTop > use,
+  .floatBottom > use {
+    animation-duration: 15s;
   }
 
-  .shapeBottom {
-    bottom: -11vw;
+  .wavesTop {
+    top: -85px;
+    min-height: 90px;
+    max-height: 120px;
+  }
+
+  .wavesBottom {
+    bottom: -85px;
+    min-height: 90px;
+    max-height: 120px;
   }
 
   .employeeContainer h1 {
