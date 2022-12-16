@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { useReducedMotion } from 'framer-motion';
 
 export default function CallToAction() {
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { addedToCart, cartItems, setCartItems } = useContext(AppContext);
   const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
   const shouldReduceMotion = useReducedMotion();
 
@@ -26,10 +26,11 @@ export default function CallToAction() {
         </motion.div>
         <h2>Don&apos;t forget a side of Coral Bits!</h2>
         <button
+          className='primary-button-sq'
           onClick={handleAddToCart}
           data-value='Coral Bits'
-          className='primary-button-sq'
           aria-label='Add Coral Bits to the cart.'
+          disabled={addedToCart ? true : false}
         >
           <Image src={AddtoCartIcon} alt='Add to Cart' />
         </button>

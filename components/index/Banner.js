@@ -9,7 +9,7 @@ import Flower3 from '../../public/images/flower-3.svg';
 import { useAddToCart } from '../../hooks/useAddToCart';
 
 export default function Banner() {
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { addedToCart, cartItems, setCartItems } = useContext(AppContext);
   const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
 
   return (
@@ -36,6 +36,7 @@ export default function Banner() {
           onClick={handleAddToCart}
           data-value='Krabby Patty'
           aria-label='Add a Krabby Patty to the cart.'
+          disabled={addedToCart ? true : false}
         >
           Add to cart
         </button>
