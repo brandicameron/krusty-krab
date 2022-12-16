@@ -1,16 +1,12 @@
 import styles from '../../styles/index/CallToAction.module.css';
-import { useContext } from 'react';
-import { AppContext } from '../../AppContext';
 import Image from 'next/image';
-import CoralBits from '../../public/images/coral-bits.png';
-import AddtoCartIcon from '../../public/images/cart-add.svg';
-import { useAddToCart } from '../../hooks/useAddToCart';
 import { motion } from 'framer-motion';
 import { useReducedMotion } from 'framer-motion';
+import CoralBits from '../../public/images/coral-bits.png';
+import AddtoCartIcon from '../../public/images/cart-add.svg';
+import AddToCartBtn from '../shared/AddToCartBtn';
 
 export default function CallToAction() {
-  const { addedToCart, cartItems, setCartItems } = useContext(AppContext);
-  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
   const shouldReduceMotion = useReducedMotion();
 
   return (
@@ -25,15 +21,9 @@ export default function CallToAction() {
           <Image src={CoralBits} alt="Don't forget a side of Coral Bits!" />
         </motion.div>
         <h2>Don&apos;t forget a side of Coral Bits!</h2>
-        <button
-          className='primary-button-sq'
-          onClick={handleAddToCart}
-          data-value='Coral Bits'
-          aria-label='Add Coral Bits to the cart.'
-          disabled={addedToCart ? true : false}
-        >
+        <AddToCartBtn btnClass='primary-button-sq' data='Coral Bits'>
           <Image src={AddtoCartIcon} alt='Add to Cart' />
-        </button>
+        </AddToCartBtn>
       </article>
     </>
   );

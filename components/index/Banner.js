@@ -1,17 +1,12 @@
 import styles from '../../styles/index/Banner.module.css';
-import { useContext } from 'react';
-import { AppContext } from '../../AppContext';
 import Image from 'next/image';
 import KrabbyPatty from '../../public/images/krabby-patty.png';
 import Flower1 from '../../public/images/flower-1.svg';
 import Flower2 from '../../public/images/flower-2.svg';
 import Flower3 from '../../public/images/flower-3.svg';
-import { useAddToCart } from '../../hooks/useAddToCart';
+import AddToCartBtn from '../shared/AddToCartBtn';
 
 export default function Banner() {
-  const { addedToCart, cartItems, setCartItems } = useContext(AppContext);
-  const { handleAddToCart } = useAddToCart(cartItems, setCartItems);
-
   return (
     <section className={styles.banner} id='skip-target'>
       <Image className={styles.flower1} src={Flower1} alt='' />
@@ -31,15 +26,9 @@ export default function Banner() {
           </span>
         </h1>
         <p>Try our secret formula Krabby Patty — you&apos;ll fall in love at first bite.</p>
-        <button
-          className='primary-button'
-          onClick={handleAddToCart}
-          data-value='Krabby Patty'
-          aria-label='Add a Krabby Patty to the cart.'
-          disabled={addedToCart ? true : false}
-        >
+        <AddToCartBtn btnClass='primary-button' data='Krabby Patty'>
           Add to cart
-        </button>
+        </AddToCartBtn>
       </div>
     </section>
   );
