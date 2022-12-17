@@ -8,6 +8,8 @@ export default function CartLink() {
   const [newItemAdded, setNewItemAdded] = useState(false);
   const { cartItems } = useContext(AppContext);
 
+  // Try to do this without using useEffect
+
   useEffect(() => {
     let sum = 0;
     cartItems.forEach((value) => {
