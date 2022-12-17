@@ -26,7 +26,7 @@ export default function Banner() {
           </span>
         </h1>
         <p>Try our secret formula Krabby Patty — you&apos;ll fall in love at first bite.</p>
-        <AddToCartBtn btnClass='primary-button' data='Krabby Patty'>
+        <AddToCartBtn btnClass='primary-button' name='Krabby Patty' price='1.25'>
           Add to cart
         </AddToCartBtn>
       </div>

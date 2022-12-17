@@ -4,10 +4,19 @@ import { AppContext } from '../../AppContext';
 import Link from 'next/link';
 
 export default function CartLink() {
+  const [numItemsInCart, setNumItemsInCart] = useState(0);
   const [newItemAdded, setNewItemAdded] = useState(false);
-  const { numItemsInCart } = useContext(AppContext);
+  const { cartItems } = useContext(AppContext);
 
-  // Makes number bubble above cart animate when new item added
+  useEffect(() => {
+    let sum = 0;
+    cartItems.forEach((value) => {
+      sum += value.quantity;
+    });
+    setNumItemsInCart(sum);
+  }, [cartItems]);
+
+  // Makes number bubble above cart animate when new item added or removed
   useEffect(() => {
     setNewItemAdded(true);
     let timer = setTimeout(() => {
