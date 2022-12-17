@@ -10,7 +10,7 @@ export default function Notification() {
   const { itemName, cartItems, addedToCart } = useContext(AppContext);
 
   useEffect(() => {
-    setNumItems(cartItems.get(itemName));
+    setNumItems(cartItems.get(itemName).quantity);
   }, []);
 
   const itemNameHandlePlural = () => {

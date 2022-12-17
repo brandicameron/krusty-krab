@@ -18,9 +18,26 @@ export function useAddToCart() {
   }, [addedToCart]);
 
   const handleAddToCart = (e) => {
-    const value = e.currentTarget.getAttribute('data-value');
-    setItemName(value);
-    setCartItems((prev) => new Map(prev).set(value, cartItems.get(value) + 1 || 1));
+    const currentItemName = e.currentTarget.getAttribute('data-name');
+    const currentItemPrice = e.currentTarget.getAttribute('data-price');
+    setItemName(currentItemName);
+
+    if (cartItems.has(currentItemName)) {
+      setCartItems((prev) =>
+        new Map(prev).set(currentItemName, {
+          quantity: cartItems.get(currentItemName).quantity + 1,
+          price: currentItemPrice,
+        })
+      );
+    } else {
+      setCartItems((prev) =>
+        new Map(prev).set(currentItemName, {
+          quantity: 1,
+          price: currentItemPrice,
+        })
+      );
+    }
+
     setAddedToCart(true);
   };
 

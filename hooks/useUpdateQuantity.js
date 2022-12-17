@@ -1,26 +1,34 @@
 import { useContext } from 'react';
 import { AppContext } from '../AppContext';
-import { menuItems } from '../data/menuItems';
 
 export function useUpdateQuantity() {
   const { cartItems, setCartItems } = useContext(AppContext);
 
   const shoppingCart = Array.from(cartItems, ([key, value]) => {
-    let itemPrice = menuItems.find((el) => el.name === key);
-    return { name: key, quantity: value, price: parseFloat(itemPrice.price) * value };
+    return { name: key, quantity: value.quantity, price: value.price * value.quantity };
   });
 
   const total = shoppingCart.reduce((total, obj) => parseFloat(obj.price) + total, 0);
 
   const handleUpdateQuantity = (e) => {
     const name = e.currentTarget.getAttribute('data-name');
-    let currentQuantity = cartItems.get(name);
+    let currentQuantity = cartItems.get(name).quantity;
 
-    if (e.target.textContent === '-' && cartItems.get(name) > 0) {
-      setCartItems((prev) => new Map(prev).set(name, cartItems.get(name) - 1));
+    if (e.target.textContent === '-' && cartItems.get(name).quantity > 0) {
+      setCartItems((prev) =>
+        new Map(prev).set(name, {
+          quantity: cartItems.get(name).quantity - 1,
+          price: cartItems.get(name).price,
+        })
+      );
       currentQuantity = currentQuantity - 1;
     } else if (e.target.textContent === '+') {
-      setCartItems((prev) => new Map(prev).set(name, cartItems.get(name) + 1));
+      setCartItems((prev) =>
+        new Map(prev).set(name, {
+          quantity: cartItems.get(name).quantity + 1,
+          price: cartItems.get(name).price,
+        })
+      );
       currentQuantity = currentQuantity + 1;
     }
 
