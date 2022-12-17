@@ -1,11 +1,20 @@
 import styles from '../styles/cart/Cart.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';
 import { useUpdateQuantity } from '../hooks/useUpdateQuantity';
 import { v4 as uuidv4 } from 'uuid';
 
 export default function Cart() {
-  const { handleUpdateQuantity, total, shoppingCart } = useUpdateQuantity();
+  const { cartItems } = useContext(AppContext);
+  const { handleUpdateQuantity } = useUpdateQuantity();
+
+  const shoppingCart = Array.from(cartItems, ([key, value]) => {
+    return { name: key, quantity: value.quantity, price: value.price * value.quantity };
+  });
+
+  const total = shoppingCart.reduce((total, obj) => parseFloat(obj.price) + total, 0);
 
   return (
     <div className={styles.container}>

@@ -4,12 +4,6 @@ import { AppContext } from '../AppContext';
 export function useUpdateQuantity() {
   const { cartItems, setCartItems } = useContext(AppContext);
 
-  const shoppingCart = Array.from(cartItems, ([key, value]) => {
-    return { name: key, quantity: value.quantity, price: value.price * value.quantity };
-  });
-
-  const total = shoppingCart.reduce((total, obj) => parseFloat(obj.price) + total, 0);
-
   const handleUpdateQuantity = (e) => {
     const name = e.currentTarget.getAttribute('data-name');
     let currentQuantity = cartItems.get(name).quantity;
@@ -42,5 +36,5 @@ export function useUpdateQuantity() {
     }
   };
 
-  return { handleUpdateQuantity, total, shoppingCart };
+  return { handleUpdateQuantity };
 }
