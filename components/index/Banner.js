@@ -9,7 +9,7 @@ import AddToCartBtn from '../shared/AddToCartBtn';
 export default function Banner() {
   return (
     <section className={styles.banner} id='skip-target'>
-      <Image className={styles.flower1} src={Flower1} alt='' />
+      <Image priority={true} className={styles.flower1} src={Flower1} alt='' />
       <Image className={styles.flower2} src={Flower2} alt='' />
       <Image className={styles.flower3} src={Flower3} alt='' />
       <div className={styles.content}>
